@@ -1114,11 +1114,24 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 @media (max-width: 1024px) {
-    .amenity-more__panel { grid-template-columns: 1fr; grid-template-rows: 55vh 1fr; }
+    .amenity-more { overflow: visible; }
+    .amenity-more__panels { 
+        flex-direction: column; 
+        width: 100% !important; 
+        transform: none !important; /* Kill GSAP horizontal scroll on mobile */
+    }
+    .amenity-more__panel { 
+        width: 100%; 
+        height: auto; 
+        min-height: auto;
+        grid-template-columns: 1fr; 
+        grid-template-rows: 50vh auto;
+        will-change: auto;
+        transform: none;
+    }
     .amenity-more__panel-img { grid-column: 1; grid-row: 1; margin: 0; }
-    .amenity-more__panel-text { grid-column: 1; grid-row: 2; padding: 3vh 6vw; }
-    .amenity-more__panels { flex-direction: column; width: 100%; }
-    .amenity-more__panel { width: 100vw; }
+    .amenity-more__panel-text { grid-column: 1; grid-row: 2; padding: 3vh 6vw 5vh; }
+    .amenity-more__panel-heading { font-size: clamp(2rem, 8vw, 4rem); }
 }
 
 /* ── FOOTER (SECTION 7) ── */

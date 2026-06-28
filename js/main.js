@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const amenityMoreSection = document.querySelector('.amenity-more');
     const amenityMorePanels  = document.querySelector('.amenity-more__panels');
     
-    if (amenityMoreSection && amenityMorePanels) {
+    if (amenityMoreSection && amenityMorePanels && window.innerWidth > 1024) {
         // Use requestAnimationFrame to ensure layout is settled before measuring
         requestAnimationFrame(() => {
             // Total horizontal scroll distance = total width of all panels minus 1 viewport
