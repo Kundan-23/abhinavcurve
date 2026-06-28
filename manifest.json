@@ -1,0 +1,16 @@
+{
+    "name": "The Curve — Crown of Grandeur",
+    "short_name": "The Curve",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0A0A0A",
+    "theme_color": "#0A0A0A",
+    "description": "Premium 2 & 3 BHK Residences in Bolinj, Virar (W) by Abhinav Group",
+    "icons": [
+        {
+            "src": "assets/images/logos/The Curve Final Logo .png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

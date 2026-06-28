@@ -1,0 +1,430 @@
+/* ============================================================
+   THE CURVE — RESPONSIVE STYLES
+   Mobile-first overrides for all sections
+   ============================================================ */
+
+/* ──────────────────────────────────────────────────────────────
+   TABLET & BELOW (max-width: 1024px)
+   ────────────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+
+  .header-nav {
+    display: none;
+  }
+
+  .header-cta {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  /* About cards stack */
+  .about-cards {
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: var(--space-8);
+  }
+
+  .about-stats {
+    flex-wrap: wrap;
+    gap: var(--space-6);
+  }
+
+  .about-stat-divider {
+    display: none;
+  }
+
+  /* USP Grid 2 columns */
+  .usp-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Floor plan grid stack */
+  .floorplan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Builder stats 2 col */
+  .builder-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .builder-trust-points {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact grid stack */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  /* Gallery 2 columns */
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-grid > .gallery-item:nth-child(1),
+  .gallery-grid > .gallery-item:nth-child(4) {
+    grid-column: span 1;
+  }
+
+  /* Footer 2 columns */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   MOBILE (max-width: 768px)
+   ────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* ── Base ── */
+  .container {
+    padding-left: var(--space-5);
+    padding-right: var(--space-5);
+  }
+
+  .section-header {
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  /* ── Header ── */
+  .header-container {
+    padding: var(--space-3) var(--space-5);
+  }
+
+  .header-logo-img {
+    max-height: 36px;
+  }
+
+  /* ── Hero ── */
+  .hero-section {
+    min-height: 100svh;
+    padding-bottom: 80px; /* space for mobile bar */
+  }
+
+  .hero-content {
+    text-align: center;
+    align-items: center;
+    padding: 0 var(--space-5);
+    padding-bottom: 12vh;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 7vw, 3rem);
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-price-badge {
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+  /* ── About ── */
+  .about-section {
+    min-height: auto;
+    padding: var(--space-16) 0;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+
+  .about-cards {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+    padding: var(--space-6) var(--space-5);
+    text-align: center;
+  }
+
+  .about-stat-divider {
+    display: none;
+  }
+
+  /* ── USP ── */
+  .usp-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  .usp-card {
+    padding: var(--space-6);
+  }
+
+  /* ── Location ── */
+  .location-image-wrapper {
+    height: 300px;
+  }
+
+  .location-carousel {
+    gap: var(--space-4);
+    padding: 0 var(--space-5);
+  }
+
+  .location-card {
+    min-width: 260px;
+    height: 220px;
+  }
+
+  /* ── Map ── */
+  .map-wrapper iframe {
+    height: 320px;
+  }
+
+  .map-info-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+  }
+
+  /* ── Amenities ── */
+  .amenities-carousel {
+    gap: var(--space-4);
+    padding: 0 var(--space-5) var(--space-4);
+  }
+
+  .amenity-card {
+    min-width: 280px;
+    height: 380px;
+  }
+
+  /* ── Floor Plans ── */
+  .floorplan-tabs {
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .floorplan-tab {
+    font-size: 0.8rem;
+    padding: var(--space-2) var(--space-3);
+    flex: 1;
+    text-align: center;
+    min-width: 0;
+  }
+
+  .floorplan-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  /* ── Builder ── */
+  .builder-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+  }
+
+  .builder-trust-points {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .builder-logo {
+    max-width: 150px;
+  }
+
+  .builder-quote p {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+  }
+
+  /* ── Gallery ── */
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 200px;
+    gap: var(--space-3);
+  }
+
+  .gallery-grid > .gallery-item:nth-child(1),
+  .gallery-grid > .gallery-item:nth-child(4) {
+    grid-column: span 1;
+  }
+
+  /* ── Contact / Lead Form ── */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .contact-content {
+    text-align: center;
+  }
+
+  .contact-benefits {
+    text-align: left;
+  }
+
+  .contact-trust-badges {
+    justify-content: center;
+  }
+
+  /* ── FAQ ── */
+  .faq-question span {
+    font-size: 0.95rem;
+  }
+
+  /* ── Footer ── */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    text-align: center;
+  }
+
+  .footer-brand {
+    align-items: center;
+  }
+
+  .footer-contact-list {
+    align-items: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-3);
+    text-align: center;
+  }
+
+  .footer {
+    padding-bottom: 80px; /* space for mobile bottom bar */
+  }
+
+  .footer-disclaimer {
+    text-align: center;
+  }
+
+  /* ── Mobile Bottom Bar ── */
+  .mobile-bar {
+    display: flex;
+  }
+
+  /* ── WhatsApp Float — above mobile bar ── */
+  .whatsapp-float {
+    bottom: 90px;
+  }
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   SMALL PHONES (max-width: 480px)
+   ────────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+
+  .hero-title {
+    font-size: clamp(1.5rem, 8vw, 2.2rem);
+  }
+
+  .section-title {
+    font-size: clamp(1.4rem, 6vw, 1.8rem);
+  }
+
+  .eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+  }
+
+  /* Gallery single column */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 220px;
+  }
+
+  /* About stats single row per stat */
+  .about-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .counter-number {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+  }
+
+  /* Builder stats */
+  .builder-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Map info single column */
+  .map-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Amenities smaller cards */
+  .amenity-card {
+    min-width: 240px;
+    height: 340px;
+  }
+
+  .location-card {
+    min-width: 230px;
+    height: 200px;
+  }
+
+  /* Mobile menu links smaller */
+  .mobile-menu-link {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   LARGE SCREENS (min-width: 1600px)
+   ────────────────────────────────────────────────────────────── */
+@media (min-width: 1600px) {
+
+  .container {
+    max-width: 1440px;
+  }
+
+  .hero-title {
+    font-size: 4.5rem;
+  }
+
+  .section-title {
+    font-size: 3.2rem;
+  }
+}

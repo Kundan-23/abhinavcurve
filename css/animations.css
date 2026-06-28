@@ -1,0 +1,212 @@
+/**
+ * ============================================================
+ *  THE CURVE — Animations
+ * ============================================================
+ *  Keyframes, hover micro-interactions, shimmer utilities,
+ *  and reduced-motion accessibility query.
+ * ============================================================
+ */
+
+
+/* ==========================================================
+ *  KEYFRAMES
+ * ========================================================== */
+
+/* Conic border rotation — contact form card animated border */
+@keyframes rotateBorder {
+  0%   { transform: rotate(0deg);   }
+  100% { transform: rotate(360deg); }
+}
+
+/* Subtle logo heart-beat — preloader branding */
+@keyframes pulse-slow {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.06);
+    opacity: 1;
+  }
+}
+
+/* WhatsApp floating button pulse ring */
+@keyframes pulse-grow {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* Scroll indicator text float */
+@keyframes float {
+  0%, 100% { transform: translateY(0);    }
+  50%      { transform: translateY(-6px); }
+}
+
+/* Scroll indicator line slide-down */
+@keyframes scrollDown {
+  0%   { top: -30px; }
+  50%  { top: 0;     }
+  100% { top: 60px;  }
+}
+
+/* General fade in */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Preloader ring stroke draw */
+@keyframes drawStroke {
+  from { stroke-dashoffset: 283; }
+  to   { stroke-dashoffset: 0;   }
+}
+
+/* Shimmer / loading-skeleton sweep */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+/* Simple pulse (video placeholder, icons) */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+/* Fade-up entrance (CSS-only version) */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide-in from left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide-in from right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Gold glow pulse — used for highlights */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(184, 150, 62, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px 4px rgba(184, 150, 62, 0.15);
+  }
+}
+
+
+/* ==========================================================
+ *  ANIMATION UTILITY CLASSES
+ * ========================================================== */
+
+/* Shimmer skeleton state for loading placeholders */
+.btn-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0.08)
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+/* Fade-up helper — only hide when GSAP is confirmed ready */
+.animate-fade-up {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity   var(--transition-slow),
+    transform var(--transition-slow);
+}
+
+/* JS adds .gsap-ready to body when GSAP loads — only then hide for animation */
+body.gsap-ready .animate-fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.animate-fade-up.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ==========================================================
+ *  REDUCED-MOTION ACCESSIBILITY
+ * ========================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+
+  /* Elements that must NOT pulse / spin */
+  .preloader-logo   { animation: none; }
+  .whatsapp-float   { animation: none; }
+
+  .contact-form-card-border::before,
+  .border-gradient-wrapper::before {
+    animation: none;
+    background: var(--color-accent);
+  }
+
+  .scroll-indicator-text,
+  .scroll-indicator-dot {
+    animation: none;
+  }
+
+  /* Ensure fade-up helpers are visible immediately */
+  .animate-fade-up {
+    opacity: 1;
+    transform: none;
+  }
+}
