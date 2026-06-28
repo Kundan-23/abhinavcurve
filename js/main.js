@@ -16,22 +16,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial preloader intro animations (plays immediately)
     gsap.to('.preloader__card-progress', {
         strokeDashoffset: 0,
-        duration: 2.5,
+        duration: 0.8,
         ease: 'power2.inOut'
     });
     gsap.to('.preloader__brand-logo, .preloader__logo-text, .preloader__developer-logo', {
         opacity: 1,
         y: -10,
-        duration: 1,
-        stagger: 0.2,
+        duration: 0.6,
+        stagger: 0.1,
         ease: 'power2.out',
-        delay: 1.0
+        delay: 0.2
     });
 
     // The sequence to hide the preloader and reveal the site (plays ONLY when fully loaded)
     preloaderTl.to('.preloader', {
         yPercent: -100,
-        duration: 1.2,
+        duration: 0.8,
         ease: 'expo.inOut',
         onComplete: () => {
             document.getElementById('preloader').style.display = 'none';
@@ -40,23 +40,23 @@ document.addEventListener('DOMContentLoaded', () => {
     .fromTo('.hero__title', 
         { opacity: 0, y: 30 },
         { opacity: 1, y: 0, duration: 1.2, ease: 'expo.out' }, 
-        "-=0.6"
+        "-=0.4"
     )
     .fromTo('.hero__arrow', 
         { opacity: 0, y: -20 },
         { opacity: 1, y: 0, duration: 1, ease: 'power2.out' }, 
-        "-=0.8"
+        "-=0.6"
     )
     .fromTo('.hero__huge-logo span',
         { opacity: 0, y: 100 },
         { opacity: 1, y: 0, duration: 1.5, stagger: 0.05, ease: 'expo.out' },
-        "-=1.2"
+        "-=1.0"
     );
 
     // Wait for EVERY asset (including all 20MB of images) to fully download before revealing site
     const revealSite = () => {
         // Ensure the initial border animation has at least a moment to play
-        setTimeout(() => { preloaderTl.play(); }, 1500);
+        setTimeout(() => { preloaderTl.play(); }, 400);
     };
 
     if (document.readyState === 'complete') {
