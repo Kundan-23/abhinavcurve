@@ -1019,8 +1019,7 @@ img { display: block; max-width: 100%; height: auto; }
     display: flex;
     flex-wrap: nowrap;
     width: max-content;
-    will-change: transform;
-    transform: translateZ(0);   /* force GPU layer */
+    /* Removed will-change and translateZ to prevent massive GPU texture crash on Safari/Vercel */
 }
 
 .amenity-more__panel {
@@ -1028,6 +1027,8 @@ img { display: block; max-width: 100%; height: auto; }
     width: 100vw;
     height: 100vh;
     flex-shrink: 0;
+    will-change: transform;
+    transform: translateZ(0); /* Create separate GPU layers for each panel */
     display: grid;
     /* Reference layout: image covers left ~60%, text column right ~40%,
        but next panel peeks ~15vw from the right edge */
