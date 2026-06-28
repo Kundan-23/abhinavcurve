@@ -11,33 +11,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // (Already wrapped in spans in HTML: .hero__huge-logo span)
 
     // 3. Preloader Sequence
-    const tl = gsap.timeline();
+    const preloaderTl = gsap.timeline({ paused: true });
 
-    // Trace the card border
-    tl.to('.preloader__card-progress', {
+    // Initial preloader intro animations (plays immediately)
+    gsap.to('.preloader__card-progress', {
         strokeDashoffset: 0,
         duration: 2.5,
         ease: 'power2.inOut'
-    })
-    // Fade in Logos & Text
-    .to('.preloader__brand-logo, .preloader__logo-text, .preloader__developer-logo', {
+    });
+    gsap.to('.preloader__brand-logo, .preloader__logo-text, .preloader__developer-logo', {
         opacity: 1,
         y: -10,
         duration: 1,
         stagger: 0.2,
-        ease: 'power2.out'
-    }, "-=1.5")
-    // Hide Preloader Layer
-    .to('.preloader', {
+        ease: 'power2.out',
+        delay: 1.0
+    });
+
+    // The sequence to hide the preloader and reveal the site (plays ONLY when fully loaded)
+    preloaderTl.to('.preloader', {
         yPercent: -100,
         duration: 1.2,
         ease: 'expo.inOut',
-        delay: 0.5,
         onComplete: () => {
             document.getElementById('preloader').style.display = 'none';
         }
     })
-    // Hero Elements Reveal Sequence
     .fromTo('.hero__title', 
         { opacity: 0, y: 30 },
         { opacity: 1, y: 0, duration: 1.2, ease: 'expo.out' }, 
@@ -53,6 +52,19 @@ document.addEventListener('DOMContentLoaded', () => {
         { opacity: 1, y: 0, duration: 1.5, stagger: 0.05, ease: 'expo.out' },
         "-=1.2"
     );
+
+    // Wait for EVERY asset (including all 20MB of images) to fully download before revealing site
+    const revealSite = () => {
+        // Ensure the initial border animation has at least a moment to play
+        setTimeout(() => { preloaderTl.play(); }, 1500);
+    };
+
+    if (document.readyState === 'complete') {
+        revealSite();
+    } else {
+        window.addEventListener('load', revealSite);
+    }
+
 
     // 4. Hero Parallax on Scroll (Disabled to prevent cropping of text-heavy poster image)
     /*
