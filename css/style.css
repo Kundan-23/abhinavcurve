@@ -772,7 +772,7 @@ img { display: block; max-width: 100%; height: auto; }
 
 /* ── AMENITIES (SECTION 3) ── */
 .amenities-new {
-    background-color: var(--bg-dark-section); /* Dark Theme */
+    background-color: var(--bg-main); /* Light Ivory */
     padding: 6rem 0;
 }
 
@@ -781,7 +781,7 @@ img { display: block; max-width: 100%; height: auto; }
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 300;
     font-style: italic;
-    color: #FAF7F2; /* Light text */
+    color: var(--text-main);
     letter-spacing: 1px;
 }
 
@@ -794,7 +794,7 @@ img { display: block; max-width: 100%; height: auto; }
 .amenities-new__desc {
     font-family: var(--font-body);
     font-size: 1.1rem;
-    color: rgba(250, 247, 242, 0.7); /* Light muted text */
+    color: var(--text-muted);
     max-width: 600px;
     margin: 0 auto 4rem;
     line-height: 1.6;
@@ -826,24 +826,24 @@ img { display: block; max-width: 100%; height: auto; }
     align-items: center;
     gap: 1rem;
     padding: 2rem 1rem;
-    background: rgba(255, 255, 255, 0.03); /* Glassy dark card */
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    color: #FAF7F2;
+    background: var(--bg-card);
+    border: var(--border-subtle);
     transition: all 0.35s var(--ease-expo);
     cursor: default;
+    color: var(--text-main);
 }
 
 .amenity-icon-card:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: #fff;
     border-color: var(--gold);
     transform: translateY(-4px);
-    box-shadow: 0 12px 48px rgba(0,0,0,0.3);
+    box-shadow: var(--shadow-medium);
 }
 
 .amenity-icon-card svg {
     width: 40px;
     height: 40px;
-    color: var(--gold);
+    color: #8C6F2A; /* Darker Gold for more contrast */
     transition: color 0.35s ease;
 }
 
