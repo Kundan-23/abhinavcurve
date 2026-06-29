@@ -222,12 +222,12 @@
 
 
         <!-- ============================================================
-             SECTION 5: GALLERY
+             SECTION 5: FEATURED AMENITIES (Replaced Gallery)
              ============================================================ -->
         <section class="gallery-new" id="gallery">
-            <div class="gallery-new__watermark">GALLERY</div>
+            <div class="gallery-new__watermark">AMENITIES</div>
             <div class="gallery-new__header text-center animate-fade-up">
-                <h2 class="gallery-new__title">GALLERY</h2>
+                <h2 class="gallery-new__title">FEATURED AMENITIES</h2>
                 <div class="gallery-new__divider">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M12 2L2 22h20L12 2z"/></svg>
                 </div>
@@ -236,38 +236,186 @@
             <!-- Horizontal Moveable Gallery Container - Track 1 (Left) -->
             <div class="gallery-new__track-container animate-fade-in">
                 <div class="gallery-new__track">
-                    <img src="assets/images/gallery/gallery-01.jpg" alt="Gallery 1" class="gallery-new__img">
-                    <img src="assets/images/gallery/gallery-02.jpg" alt="Gallery 2" class="gallery-new__img">
-                    <img src="assets/images/gallery/gallery-03.jpg" alt="Gallery 3" class="gallery-new__img">
-                    <img src="assets/images/gallery/gallery-04.jpg" alt="Gallery 4" class="gallery-new__img">
-                    <img src="assets/images/gallery/gallery-05.jpg" alt="Gallery 5" class="gallery-new__img">
-                    <img src="assets/images/gallery/gallery-06.jpg" alt="Gallery 6" class="gallery-new__img">
-                    <!-- Duplicate for infinite scroll effect -->
-                    <img src="assets/images/gallery/gallery-01.jpg" alt="Gallery 1" class="gallery-new__img">
-                    <img src="assets/images/gallery/gallery-02.jpg" alt="Gallery 2" class="gallery-new__img">
-                    <img src="assets/images/gallery/gallery-03.jpg" alt="Gallery 3" class="gallery-new__img">
-                    <img src="assets/images/gallery/gallery-04.jpg" alt="Gallery 4" class="gallery-new__img">
-                    <img src="assets/images/gallery/gallery-05.jpg" alt="Gallery 5" class="gallery-new__img">
-                    <img src="assets/images/gallery/gallery-06.jpg" alt="Gallery 6" class="gallery-new__img">
+                    <!-- Original Set -->
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-aquahub.jpg" alt="Aqua Hub" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">Aqua Hub</h3>
+                            <p class="gallery-new__item-desc">A pristine swimming pool to dive into relaxation and luxury.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-fitness-zone.jpg" alt="Fitness Zone" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">Fitness Zone</h3>
+                            <p class="gallery-new__item-desc">State-of-the-art equipment to elevate your daily workouts.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-grand-ballroom.jpg" alt="Grand Ballroom" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">Grand Ballroom</h3>
+                            <p class="gallery-new__item-desc">An elegant space designed for life's most beautiful celebrations.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-adventure-zone.jpg" alt="Adventure Zone" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">Adventure Zone</h3>
+                            <p class="gallery-new__item-desc">Thrilling spaces tailored for energetic and adventurous play.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-chill-deck.jpg" alt="Chill Deck" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">Chill Deck</h3>
+                            <p class="gallery-new__item-desc">Unwind and socialize in a serene, perfectly curated environment.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-wellness-studio.jpg" alt="Wellness Studio" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">Wellness Studio</h3>
+                            <p class="gallery-new__item-desc">Find your zen with dedicated spaces for yoga and meditation.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Duplicate Set for Infinite Scroll -->
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-aquahub.jpg" alt="Aqua Hub" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">Aqua Hub</h3>
+                            <p class="gallery-new__item-desc">A pristine swimming pool to dive into relaxation and luxury.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-fitness-zone.jpg" alt="Fitness Zone" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">Fitness Zone</h3>
+                            <p class="gallery-new__item-desc">State-of-the-art equipment to elevate your daily workouts.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-grand-ballroom.jpg" alt="Grand Ballroom" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">Grand Ballroom</h3>
+                            <p class="gallery-new__item-desc">An elegant space designed for life's most beautiful celebrations.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-adventure-zone.jpg" alt="Adventure Zone" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">Adventure Zone</h3>
+                            <p class="gallery-new__item-desc">Thrilling spaces tailored for energetic and adventurous play.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-chill-deck.jpg" alt="Chill Deck" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">Chill Deck</h3>
+                            <p class="gallery-new__item-desc">Unwind and socialize in a serene, perfectly curated environment.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-wellness-studio.jpg" alt="Wellness Studio" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">Wellness Studio</h3>
+                            <p class="gallery-new__item-desc">Find your zen with dedicated spaces for yoga and meditation.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             
             <!-- Horizontal Moveable Gallery Container - Track 2 (Right) -->
             <div class="gallery-new__track-container animate-fade-in" style="margin-top: 2rem;">
                 <div class="gallery-new__track gallery-new__track--reverse">
-                    <img src="assets/images/gallery/gallery-06.jpg" alt="Gallery 6" class="gallery-new__img">
-                    <img src="assets/images/gallery/gallery-05.jpg" alt="Gallery 5" class="gallery-new__img">
-                    <img src="assets/images/gallery/gallery-04.jpg" alt="Gallery 4" class="gallery-new__img">
-                    <img src="assets/images/gallery/gallery-03.jpg" alt="Gallery 3" class="gallery-new__img">
-                    <img src="assets/images/gallery/gallery-02.jpg" alt="Gallery 2" class="gallery-new__img">
-                    <img src="assets/images/gallery/gallery-01.jpg" alt="Gallery 1" class="gallery-new__img">
-                    <!-- Duplicate for infinite scroll effect -->
-                    <img src="assets/images/gallery/gallery-06.jpg" alt="Gallery 6" class="gallery-new__img">
-                    <img src="assets/images/gallery/gallery-05.jpg" alt="Gallery 5" class="gallery-new__img">
-                    <img src="assets/images/gallery/gallery-04.jpg" alt="Gallery 4" class="gallery-new__img">
-                    <img src="assets/images/gallery/gallery-03.jpg" alt="Gallery 3" class="gallery-new__img">
-                    <img src="assets/images/gallery/gallery-02.jpg" alt="Gallery 2" class="gallery-new__img">
-                    <img src="assets/images/gallery/gallery-01.jpg" alt="Gallery 1" class="gallery-new__img">
+                    <!-- Original Set -->
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-game-lounge.jpg" alt="Game Lounge" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">Game Lounge</h3>
+                            <p class="gallery-new__item-desc">Premium indoor recreation with billiards, table tennis, and more.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-badminton-court.jpg" alt="Badminton Court" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">Badminton Court</h3>
+                            <p class="gallery-new__item-desc">A professional-grade indoor court for active sports enthusiasts.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-little-nest.jpg" alt="Little Nest" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">Little Nest</h3>
+                            <p class="gallery-new__item-desc">A secure, engaging space where children can explore and grow.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-open-air-theatre.jpg" alt="Open Air Theatre" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">Open Air Theatre</h3>
+                            <p class="gallery-new__item-desc">Experience cinematic magic under the expansive night sky.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-theclub.jpg" alt="The Club" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">The Club</h3>
+                            <p class="gallery-new__item-desc">An exclusive clubhouse offering world-class leisure and networking.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-walking-track.jpg" alt="Walking Track" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">Walking Track</h3>
+                            <p class="gallery-new__item-desc">A scenic trail amidst lush greens for your daily stroll.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Duplicate Set for Infinite Scroll -->
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-game-lounge.jpg" alt="Game Lounge" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">Game Lounge</h3>
+                            <p class="gallery-new__item-desc">Premium indoor recreation with billiards, table tennis, and more.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-badminton-court.jpg" alt="Badminton Court" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">Badminton Court</h3>
+                            <p class="gallery-new__item-desc">A professional-grade indoor court for active sports enthusiasts.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-little-nest.jpg" alt="Little Nest" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">Little Nest</h3>
+                            <p class="gallery-new__item-desc">A secure, engaging space where children can explore and grow.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-open-air-theatre.jpg" alt="Open Air Theatre" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">Open Air Theatre</h3>
+                            <p class="gallery-new__item-desc">Experience cinematic magic under the expansive night sky.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-theclub.jpg" alt="The Club" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">The Club</h3>
+                            <p class="gallery-new__item-desc">An exclusive clubhouse offering world-class leisure and networking.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-new__item">
+                        <img src="assets/images/amenities/amenity-walking-track.jpg" alt="Walking Track" class="gallery-new__img">
+                        <div class="gallery-new__content">
+                            <h3 class="gallery-new__item-title">Walking Track</h3>
+                            <p class="gallery-new__item-desc">A scenic trail amidst lush greens for your daily stroll.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

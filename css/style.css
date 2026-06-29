@@ -1332,28 +1332,66 @@ img { display: block; max-width: 100%; height: auto; }
     animation-play-state: paused;
 }
 
-/* Spotlight hover effect */
-.gallery-new__track:hover .gallery-new__img:not(:hover) {
-    filter: brightness(0.7) grayscale(100%);
-    transform: scale(0.98);
+/* Spotlight hover effect update */
+.gallery-new__item {
+    position: relative;
+    height: 400px;
+    width: 600px;
+    overflow: hidden;
+    cursor: crosshair;
 }
 
 .gallery-new__img {
-    height: 400px;
-    width: 600px;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-    border-radius: 0;
-    cursor: crosshair; /* Premium interaction hint */
-    transition: transform 0.6s var(--ease-expo), filter 0.6s var(--ease-expo), box-shadow 0.6s var(--ease-expo);
+    transition: transform 0.6s var(--ease-expo), filter 0.6s var(--ease-expo);
     filter: brightness(0.95);
-    position: relative;
 }
 
-.gallery-new__img:hover {
+.gallery-new__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3rem 2rem 2rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    color: #fff;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s var(--ease-expo);
+    pointer-events: none;
+}
+
+.gallery-new__item-title {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+.gallery-new__item-desc {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.gallery-new__track:hover .gallery-new__item:not(:hover) .gallery-new__img {
+    filter: brightness(0.6) grayscale(100%);
+    transform: scale(0.98);
+}
+
+.gallery-new__item:hover .gallery-new__img {
     transform: scale(1.05);
     filter: brightness(1.1);
-    z-index: 2;
-    box-shadow: var(--shadow-strong);
+}
+
+.gallery-new__item:hover .gallery-new__content {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 @keyframes galleryScroll {
