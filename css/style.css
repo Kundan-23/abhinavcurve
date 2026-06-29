@@ -1270,9 +1270,28 @@ img { display: block; max-width: 100%; height: auto; }
     background: var(--bg-main);
     padding: 6rem 0;
     overflow: hidden;
+    position: relative;
+}
+
+.gallery-new__watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-display);
+    font-size: 25vw;
+    font-weight: 300;
+    color: var(--text-main);
+    opacity: 0.02;
+    pointer-events: none;
+    z-index: 0;
+    white-space: nowrap;
+    letter-spacing: 1vw;
 }
 
 .gallery-new__header {
+    position: relative;
+    z-index: 1;
     margin-bottom: 4rem;
 }
 
@@ -1295,17 +1314,28 @@ img { display: block; max-width: 100%; height: auto; }
     width: 100%;
     position: relative;
     overflow: hidden;
+    z-index: 1;
 }
 
 .gallery-new__track {
     display: flex;
     gap: 2rem;
     width: max-content;
-    animation: galleryScroll 30s linear infinite;
+    animation: galleryScroll 40s linear infinite;
+}
+
+.gallery-new__track--reverse {
+    animation: galleryScrollReverse 40s linear infinite;
 }
 
 .gallery-new__track:hover {
     animation-play-state: paused;
+}
+
+/* Spotlight hover effect */
+.gallery-new__track:hover .gallery-new__img:not(:hover) {
+    filter: brightness(0.7) grayscale(100%);
+    transform: scale(0.98);
 }
 
 .gallery-new__img {
@@ -1313,19 +1343,27 @@ img { display: block; max-width: 100%; height: auto; }
     width: 600px;
     object-fit: cover;
     border-radius: 0;
-    cursor: pointer;
-    transition: transform 0.5s var(--ease-expo), filter 0.4s ease;
+    cursor: crosshair; /* Premium interaction hint */
+    transition: transform 0.6s var(--ease-expo), filter 0.6s var(--ease-expo), box-shadow 0.6s var(--ease-expo);
     filter: brightness(0.95);
+    position: relative;
 }
 
 .gallery-new__img:hover {
-    transform: scale(1.03);
-    filter: brightness(1.05);
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    z-index: 2;
+    box-shadow: var(--shadow-strong);
 }
 
 @keyframes galleryScroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(calc(-50% - 1rem)); } /* Shift by half of track */
+}
+
+@keyframes galleryScrollReverse {
+    0% { transform: translateX(calc(-50% - 1rem)); }
+    100% { transform: translateX(0); }
 }
 
 @media (max-width: 768px) {
