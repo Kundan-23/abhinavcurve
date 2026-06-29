@@ -1673,32 +1673,11 @@ img { display: block; max-width: 100%; height: auto; }
     cursor: pointer;
     box-shadow: 0 15px 40px rgba(0,0,0,0.1);
 }
-.explore-new__video img {
+.explore-new__video video {
     width: 100%;
     display: block;
-    filter: brightness(0.7);
-    transition: filter 0.3s ease;
-}
-.explore-new__video:hover img {
-    filter: brightness(0.6);
-}
-.explore-new__play-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80px;
-    height: 80px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s var(--ease-expo), background 0.3s ease;
-}
-.explore-new__video:hover .explore-new__play-btn {
-    transform: translate(-50%, -50%) scale(1.1);
-    background: #ffffff;
+    outline: none;
+    border-radius: 12px;
 }
 
 /* ============================================================
