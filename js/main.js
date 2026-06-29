@@ -395,4 +395,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 12. Init Scroll Animations
+    if (window.TheCurve && typeof window.TheCurve.initAnimations === 'function') {
+        window.TheCurve.initAnimations();
+    }
+
 });
