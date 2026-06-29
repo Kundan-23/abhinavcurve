@@ -43,8 +43,20 @@
                 <img src="assets/images/logos/The Curve Final Logo .png" alt="The Curve" class="header__logo">
             </a>
             
+            <nav class="header__nav is-hidden-mobile">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About us</a>
+                <a href="#amenities" class="nav-link">Amenities</a>
+                <a href="#configuration" class="nav-link">Configuration</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#proximity" class="nav-link">Proximity</a>
+                <a href="#connectivity" class="nav-link">Connectivity</a>
+                <a href="#floorplans" class="nav-link">Floor Plans</a>
+                <a href="#contact" class="nav-link">Contact Us</a>
+            </nav>
+
             <div class="header__actions">
-                <a href="#contact" class="btn btn--text is-hidden-mobile">Schedule a Site Visit</a>
+                <a href="#contact" class="btn btn--solid is-hidden-mobile">Enquire Now</a>
                 <button class="header__menu-btn" aria-label="Menu">
                     <span class="menu-btn__line"></span>
                     <span class="menu-btn__line"></span>
@@ -52,6 +64,16 @@
             </div>
         </div>
     </header>
+
+    <!-- STICKY ELEMENTS -->
+    <a href="#contact" class="sticky-enquire">Enquire Now</a>
+    
+    <div class="sticky-chat">
+        <div class="sticky-chat__avatar">
+            <img src="assets/images/placeholder/avatar.jpg" alt="Agent" onerror="this.src='https://ui-avatars.com/api/?name=Agent&background=C5A880&color=fff'">
+        </div>
+        <div class="sticky-chat__text">Need more details ? Lets chat</div>
+    </div>
 
     <!-- ============================================================
          MAIN CONTENT
@@ -61,568 +83,476 @@
         <!-- ============================================================
              SECTION 1: HERO
              ============================================================ -->
-        <section class="hero" id="hero" data-scroll-section>
+        <section class="hero" id="hero">
+            <!-- Background Layer Only -->
+            <div class="hero__bg">
+                <img src="assets/images/hero/hero-main11.jpg" alt="The Curve Residence" class="hero__img">
+            </div>
+        </section>
             
-            <!-- Background Layer -->
-            <div class="hero__bg" id="hero-bg">
-                <div class="hero__bg-inner">
-                    <img src="assets/images/hero/hero-main.jpg" alt="Premium Residence" class="hero__img">
-                    <div class="hero__overlay" style="display:none;"></div>
+        <!-- ============================================================
+             SECTION 2: ABOUT
+             ============================================================ -->
+        <section class="about-new" id="about">
+            <div class="about-new__bg">
+                <img src="assets/images/hero/hero-main11.jpg" alt="Building Overview" class="about-new__img">
+                <div class="about-new__overlay"></div>
+            </div>
+            <div class="container about-new__container">
+                <div class="about-new__card">
+                    <h2 class="about-new__title">ABOUT THE CURVE</h2>
+                    <div class="about-new__divider">
+                        <!-- Decorative elegant icon -->
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M12 2L2 22h20L12 2z"/></svg>
+                    </div>
+                    <p class="about-new__text">
+                        We Believe In Delivering Excellence Wherever We Go, And With Our Latest Global City Project, The Curve, We Bring The Very Best To Life. Nestled In The Heart Of Virar West, The Curve Is Where Luxury Feels Personal And Effortless. Every Corner Is Designed To Offer Serenity, Comfort, And Understated Elegance. It's More Than A Residence, It's A Place Where You Truly Feel At Home, Thoughtfully Crafted To Reflect Your Lifestyle And Aspirations.
+                    </p>
                 </div>
             </div>
+        </section>
 
-            <!-- Content Layer -->
-            <div class="hero__content">
-                <div class="hero__text-block" style="display:none;">
-                    <h1 class="hero__title">
-                        PREMIUM RESIDENCE —<br>
-                        THE EMBODIMENT<br>
-                        OF YOUR STATUS
-                    </h1>
-                    <div class="hero__arrow">
-                        <svg width="24" height="40" viewBox="0 0 24 40" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="12" y1="0" x2="12" y2="39"></line>
-                            <polyline points="19 32 12 39 5 32"></polyline>
-                        </svg>
+        <!-- ============================================================
+             SECTION 4: CONFIGURATION
+             ============================================================ -->
+        <section class="configuration-new" id="configuration">
+            <div class="container">
+                <div class="configuration-new__header">
+                    <h2 class="configuration-new__title text-center" style="font-family: var(--font-display); font-size: clamp(2.5rem, 4.5vw, 3.8rem); font-weight: 300; font-style: italic; color: var(--text-main); letter-spacing: 1px; margin-bottom: 0;">Configuration</h2>
+                    <div class="configuration-new__divider" style="margin: 1.5rem 0 4rem; display: flex; justify-content: center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M12 2L2 22h20L12 2z"/></svg>
                     </div>
                 </div>
                 
-                <!-- Massive Bottom Logo (Bronze) -->
-                <div class="hero__huge-logo" style="display:none;">
-                    <span>T</span>
-                    <span>H</span>
-                    <span>E</span>
-                    <span>&nbsp;</span>
-                    <span>C</span>
-                    <span>U</span>
-                    <span>R</span>
-                    <span>V</span>
-                    <span>E</span>
+                <div class="configuration-new__grid">
+                    <!-- 1 BHK -->
+                    <div class="config-vcard">
+                        <h3 class="config-vcard__title">1 BHK</h3>
+                        <p class="config-vcard__desc">Designed for Individuals</p>
+                        <div class="config-vcard__line"></div>
+                        <a href="#contact" class="btn btn--primary w-full">Enquire Now</a>
+                    </div>
+                    <!-- 2 BHK -->
+                    <div class="config-vcard">
+                        <h3 class="config-vcard__title">2 BHK</h3>
+                        <p class="config-vcard__desc">Designed for Families</p>
+                        <div class="config-vcard__line"></div>
+                        <a href="#contact" class="btn btn--primary w-full">Enquire Now</a>
+                    </div>
+                    <!-- Jodi -->
+                    <div class="config-vcard">
+                        <h3 class="config-vcard__title">JODI</h3>
+                        <p class="config-vcard__desc">Designed for Luxury</p>
+                        <div class="config-vcard__line"></div>
+                        <a href="#contact" class="btn btn--primary w-full">Enquire Now</a>
+                    </div>
                 </div>
             </div>
         </section>
-            
-        <!-- ============================================================
-             SECTION 2: STORY
-             ============================================================ -->
-        <section class="story" id="about" data-scroll-section>
-            
-            <!-- Background Layer -->
-            <div class="story__bg" id="story-bg">
-                <div class="story__bg-inner">
-                    <video class="story__video" autoplay loop muted playsinline preload="auto">
-                        <source src="assets/videos/project-walkthrough.mp4" type="video/mp4">
-                        <source src="https://raw.githubusercontent.com/Kundan-23/abhinavcurve/main/assets/videos/project-walkthrough.mp4" type="video/mp4">
-                    </video>
-                    <div class="story__overlay"></div>
-                </div>
-            </div>
 
-            <!-- Content Layer -->
-            <div class="story__content">
-                <div class="story__container">
+        <!-- ============================================================
+             SECTION 3: AMENITIES
+             ============================================================ -->
+        <section class="amenities-new" id="amenities">
+            <div class="container text-center">
+                <h2 class="amenities-new__title">10+ AMENITIES</h2>
+                <div class="amenities-new__divider">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M12 2L2 22h20L12 2z"/></svg>
+                </div>
+                <p class="amenities-new__desc">
+                    From Leisure To Convenience, Every Amenity Is Thoughtfully Created To Enrich Your Everyday Living.
+                </p>
+
+                <div class="amenities-new__grid">
+                    <div class="amenity-icon-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v5"/></svg>
+                        <span>Lobby</span>
+                    </div>
+                    <div class="amenity-icon-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+                        <span>Welcome Plaza</span>
+                    </div>
+                    <div class="amenity-icon-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M18 6h-5.2c-1.1 0-2-.9-2-2s.9-2 2-2h3M6 18h5.2c1.1 0 2 .9 2 2s-.9 2-2 2H8M4 12h16M7 9v6M17 9v6M3 9v6M21 9v6"/></svg>
+                        <span>Fitness Centre</span>
+                    </div>
+                    <div class="amenity-icon-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M21 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v3M21 16v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3M4 12h16M12 4v16"/></svg>
+                        <span>Indoor Games</span>
+                    </div>
                     
-                    <!-- Massive Top Left Logo specific to this section -->
-                    <div class="story__huge-logo">THE CURVE</div>
-
-                    <div class="story__text-left">
-                        <h2 class="story__title-large">
-                            THE CROWN<br>
-                            OF GRANDEUR
-                        </h2>
+                    <div class="amenity-icon-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M20.2 7.8l-7.7 7.7-4-4-5.7 5.7M15 7h6v6"/></svg>
+                        <span>Yoga Room</span>
                     </div>
-                    
-                    <div class="story__cards-wrapper">
-                        <!-- Dark Card -->
-                        <a href="#full-video" class="zorge-card zorge-card--dark">
-                            <span class="zorge-card__top">Full Video</span>
-                            <span class="zorge-card__icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                                </svg>
-                            </span>
-                        </a>
-                        
-                        <!-- Light Card -->
-                        <a href="#inquire" class="zorge-card zorge-card--light">
-                            <span class="zorge-card__top">Inquire Now</span>
-                            <span class="zorge-card__mid">SPECIAL<br>OFFERS</span>
-                            <span class="zorge-card__bottom">CONTACT</span>
-                        </a>
+                    <div class="amenity-icon-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        <span>Study Area</span>
+                    </div>
+                    <div class="amenity-icon-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M9 12h6M12 9v6M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2l11 4.5L12 22"/></svg>
+                        <span>Creche</span>
+                    </div>
+                    <div class="amenity-icon-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        <span>Eating Area</span>
+                    </div>
+
+                    <div class="amenity-icon-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <span>Jogging Track</span>
+                    </div>
+                    <div class="amenity-icon-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        <span>Senior Citizen Sit-out</span>
+                    </div>
+                    <div class="amenity-icon-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        <span>Children Play Area</span>
+                    </div>
+                    <div class="amenity-icon-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+                        <span>Water Cascade</span>
                     </div>
                 </div>
             </div>
-
         </section>
-
-
-
-        <!-- ============================================================
-             SECTION 4: CUSTOM MAP
-             ============================================================ -->
-        <section class="custom-map" id="map" data-scroll-section>
-            <div class="location-split">
-                
-                <div class="location-split__info">
-                    <h2 class="location-split__title">LOCATION & CONNECTIVITY</h2>
-                    <p class="location-split__desc">Strategically located in the heart of Virar West, The Curve ensures you are never far from what matters.</p>
-                    
-                    <div class="location-grid">
-                        
-                        <div class="location-group">
-                            <h3 class="location-group__title">TRANSPORT</h3>
-                            <ul class="location-list">
-                                <li><span>Virar Railway Station</span><span>7 MIN</span></li>
-                                <li><span>Rickshaw Stand</span><span>3 MIN</span></li>
-                                <li><span>Bus Stop</span><span>3 MIN</span></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="location-group">
-                            <h3 class="location-group__title">SHOPPING</h3>
-                            <ul class="location-list">
-                                <li><span>Nayara Petrol Pump</span><span>3 MIN</span></li>
-                                <li><span>Mangal Bazar</span><span>7 MIN</span></li>
-                                <li><span>D-Mart</span><span>8 MIN</span></li>
-                                <li><span>Reliance Smartbazar</span><span>8 MIN</span></li>
-                                <li><span>Star Bazar</span><span>11 MIN</span></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="location-group">
-                            <h3 class="location-group__title">HEALTHCARE</h3>
-                            <ul class="location-list">
-                                <li><span>Prakriti Hospital</span><span>4 MIN</span></li>
-                                <li><span>Rural Hospital</span><span>8 MIN</span></li>
-                                <li><span>Siddhaai Hospital</span><span>10 MIN</span></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="location-group">
-                            <h3 class="location-group__title">EDUCATION</h3>
-                            <ul class="location-list">
-                                <li><span>Matrix Academy</span><span>5 MIN</span></li>
-                                <li><span>Muljibhai Mehta Int.</span><span>7 MIN</span></li>
-                                <li><span>National English School</span><span>8 MIN</span></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="location-group">
-                            <h3 class="location-group__title">SPIRITUAL</h3>
-                            <ul class="location-list">
-                                <li><span>Ram Mandir</span><span>4 MIN</span></li>
-                                <li><span>Balaji Mandir</span><span>4 MIN</span></li>
-                                <li><span>ISKCON Temple</span><span>5 MIN</span></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="location-split__map">
-                    <iframe src="https://maps.google.com/maps?q=The+Curve,+Virar+West,+Maharashtra&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ============================================================
-             SECTION 5: LAYOUTS / APARTMENTS
-             ============================================================ -->
-        <section class="layouts" id="apartments" data-scroll-section>
-            <div class="layouts__container">
-                
-                <div class="layouts__header">
-                    <h2 class="layouts__title">CHOOSE AN APARTMENT</h2>
-                    <div class="layouts__tabs">
-                        <button class="layouts__tab is-active" data-target="layout-1bhk">1 BHK</button>
-                        <button class="layouts__tab" data-target="layout-2bhk">2 BHK</button>
-                        <button class="layouts__tab" data-target="layout-3bhk">3 BHK</button>
-                        <button class="layouts__tab" data-target="layout-penthouse">PENTHOUSE</button>
-                    </div>
-                </div>
-
-                <div class="layouts__wrapper" id="layouts-wrapper">
-                    <!-- Blur Overlay -->
-                    <div class="layouts__blur-overlay" id="floorplan-overlay">
-                        <div class="layouts__unlock-box">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                            <h3>Premium Floor Plans</h3>
-                            <p>Register to unlock our exclusive layout designs and specifications.</p>
-                            <button class="btn btn--solid" id="open-lead-modal-btn">See Floor Plans</button>
-                        </div>
-                    </div>
-
-                    <div class="layouts__content" id="floorplan-content">
-                        <!-- 1 BHK Layout -->
-                        <div class="layouts__item is-active" id="layout-1bhk">
-                            <div class="layouts__image-wrapper">
-                                <img src="./assets/images/floorplans/floorplan1.jpg" alt="1 BHK Floor Plan" class="layouts__image">
-                            </div>
-                            <div class="layouts__details">
-                                <h3 class="layouts__details-title">1 BHK PREMIUM</h3>
-                                <ul class="layouts__features">
-                                    <li><span>Carpet Area</span> <span>450 Sq. Ft.</span></li>
-                                    <li><span>Balcony</span> <span>Yes</span></li>
-                                    <li><span>Vastu Compliant</span> <span>Yes</span></li>
-                                    <li><span>View</span> <span>City Skyline</span></li>
-                                </ul>
-                                <a href="#contact" class="btn btn--outline" style="margin-top: 2rem;">INQUIRE NOW</a>
-                            </div>
-                        </div>
-
-                        <!-- 2 BHK Layout -->
-                        <div class="layouts__item" id="layout-2bhk">
-                            <div class="layouts__image-wrapper">
-                                <img src="./assets/images/floorplans/floorplan1.jpg" alt="2 BHK Floor Plan Placeholder" class="layouts__image">
-                        </div>
-                        <div class="layouts__details">
-                            <h3 class="layouts__details-title">2 BHK LUXURY</h3>
-                            <ul class="layouts__features">
-                                <li><span>Carpet Area</span> <span>750 Sq. Ft.</span></li>
-                                <li><span>Balcony</span> <span>2 Balconies</span></li>
-                                <li><span>Vastu Compliant</span> <span>Yes</span></li>
-                                <li><span>View</span> <span>Lake View</span></li>
-                            </ul>
-                            <a href="#contact" class="btn btn--outline" style="margin-top: 2rem;">INQUIRE NOW</a>
-                        </div>
-                    </div>
-
-                    <!-- 3 BHK Layout -->
-                    <div class="layouts__item" id="layout-3bhk">
-                        <div class="layouts__image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800" alt="3 BHK Floor Plan Placeholder" class="layouts__image" style="opacity: 0.5;">
-                        </div>
-                        <div class="layouts__details">
-                            <h3 class="layouts__details-title">3 BHK GRANDEUR</h3>
-                            <ul class="layouts__features">
-                                <li><span>Carpet Area</span> <span>1100 Sq. Ft.</span></li>
-                                <li><span>Balcony</span> <span>3 Balconies</span></li>
-                                <li><span>Vastu Compliant</span> <span>Yes</span></li>
-                                <li><span>View</span> <span>Panoramic</span></li>
-                            </ul>
-                            <a href="#contact" class="btn btn--outline" style="margin-top: 2rem;">INQUIRE NOW</a>
-                        </div>
-                    </div>
-
-                    <!-- Penthouse Layout -->
-                    <div class="layouts__item" id="layout-penthouse">
-                        <div class="layouts__image-wrapper">
-                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=800" alt="Penthouse Floor Plan Placeholder" class="layouts__image" style="opacity: 0.5;">
-                        </div>
-                        <div class="layouts__details">
-                            <h3 class="layouts__details-title">PENTHOUSE COLLECTION</h3>
-                            <ul class="layouts__features">
-                                <li><span>Carpet Area</span> <span>1800+ Sq. Ft.</span></li>
-                                <li><span>Terrace</span> <span>Private Terrace</span></li>
-                                <li><span>Pool</span> <span>Private Plunge Pool</span></li>
-                                <li><span>View</span> <span>360° Skyline</span></li>
-                            </ul>
-                            <a href="#contact" class="btn btn--solid" style="margin-top: 2rem;">EXCLUSIVE INQUIRY</a>
-                        </div>
-                    </div>
-
-                </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================================
-             SECTION 6: AMENITIES & SPECIFICATIONS
-             ============================================================ -->
-        <div class="amenities-container" id="amenities">
-            
-            <!-- Slide 1: The Amenity Plaza (Dark) -->
-            <section class="amenity-slide amenity-slide--dark">
-                <div class="amenity-slide__bg-text">T H E&nbsp;&nbsp;C U R V E</div>
-                <div class="amenity-slide__content">
-                    <div class="amenity-slide__left">
-                        <div class="amenity-slide__counter">1 &mdash; 5</div>
-                        <h3 class="amenity-slide__title">THE AMENITY PLAZA</h3>
-                        <p class="amenity-slide__desc">A sprawling central courtyard designed as the social heart of The Curve. Featuring lush landscaping, ambient lighting, and bespoke seating areas, the plaza offers residents an exclusive sanctuary for relaxation and community engagement right at their doorstep.</p>
-                    </div>
-                    <div class="amenity-slide__right">
-                        <img src="./assets/images/amenities/amenity--the-amenity-plaza.jpg" alt="The Amenity Plaza">
-                    </div>
-                </div>
-            </section>
-
-            <!-- Slide 2: Outdoor Dining (Light) -->
-            <section class="amenity-slide amenity-slide--light">
-                <div class="amenity-slide__bg-text">T H E&nbsp;&nbsp;C U R V E</div>
-                <div class="amenity-slide__content">
-                    <div class="amenity-slide__left">
-                        <div class="amenity-slide__counter">2 &mdash; 5</div>
-                        <h3 class="amenity-slide__title">OUTDOOR DINING</h3>
-                    </div>
-                    <div class="amenity-slide__center">
-                        <img src="./assets/images/amenities/amenity-outdoor-dining.jpg" alt="Outdoor Dining">
-                    </div>
-                    <div class="amenity-slide__right">
-                        <p class="amenity-slide__desc">Elevate your culinary experiences with our dedicated outdoor dining pavilions. Set amidst meticulously manicured gardens, these private al fresco spaces are equipped with premium barbecue stations, perfect for hosting memorable evening gatherings under the stars.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Slide 3: Work Studio (Dark) -->
-            <section class="amenity-slide amenity-slide--dark">
-                <div class="amenity-slide__bg-text">T H E&nbsp;&nbsp;C U R V E</div>
-                <div class="amenity-slide__content">
-                    <div class="amenity-slide__left">
-                        <div class="amenity-slide__counter">3 &mdash; 5</div>
-                        <h3 class="amenity-slide__title">WORK STUDIO</h3>
-                        <p class="amenity-slide__desc">A state-of-the-art coworking environment tailored for modern professionals. Experience uninterrupted focus in our climate-controlled business lounge, featuring high-speed connectivity, ergonomic workstations, and private meeting pods within a sophisticated setting.</p>
-                    </div>
-                    <div class="amenity-slide__right">
-                        <img src="./assets/images/amenities/amenity-work-studio.jpg" alt="Work Studio">
-                    </div>
-                </div>
-            </section>
-
-            <!-- Slide 4: Open Air Theatre (Light) -->
-            <section class="amenity-slide amenity-slide--light">
-                <div class="amenity-slide__bg-text">T H E&nbsp;&nbsp;C U R V E</div>
-                <div class="amenity-slide__content">
-                    <div class="amenity-slide__left">
-                        <div class="amenity-slide__counter">4 &mdash; 5</div>
-                        <h3 class="amenity-slide__title">OPEN AIR THEATRE</h3>
-                    </div>
-                    <div class="amenity-slide__center">
-                        <img src="./assets/images/amenities/amenity-open-air-theatre.jpg" alt="Open Air Theatre">
-                    </div>
-                    <div class="amenity-slide__right">
-                        <p class="amenity-slide__desc">Immerse yourself in cinematic brilliance at our exclusive open-air amphitheatre. Designed with tiered luxury seating and acoustic optimization, it provides the perfect venue for twilight movie screenings and cultural performances, combining entertainment with starlit elegance.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Slide 5: Aquahub (Dark) -->
-            <section class="amenity-slide amenity-slide--dark">
-                <div class="amenity-slide__bg-text">T H E&nbsp;&nbsp;C U R V E</div>
-                <div class="amenity-slide__content">
-                    <div class="amenity-slide__left">
-                        <div class="amenity-slide__counter">5 &mdash; 5</div>
-                        <h3 class="amenity-slide__title">AQUAHUB</h3>
-                        <p class="amenity-slide__desc">A world-class aquatic wellness center featuring a 25-meter temperature-controlled swimming pool. Whether for an invigorating morning workout or a tranquil evening dip, the Aquahub boasts crystal-clear waters, plush sun loungers, and dedicated lanes.</p>
-                    </div>
-                    <div class="amenity-slide__right">
-                        <img src="./assets/images/amenities/amenity-aquahub.jpg" alt="Aquahub">
-                    </div>
-                </div>
-            </section>
-
-            <!-- Full-Screen Horizontal Panels for remaining amenities -->
-            <section class="amenity-more" id="amenity-more">
-                <div class="amenity-more__panels">
-
-                    <div class="amenity-more__panel">
-                        <div class="amenity-more__panel-heading">T H E &nbsp;C U R V E</div>
-                        <div class="amenity-more__panel-img"><img src="./assets/images/amenities/amenity-adventure-zone.jpg" alt="Adventure Zone"></div>
-                        <div class="amenity-more__panel-text">
-                            <span class="amenity-more__label">ADVENTURE ZONE</span>
-                            <p class="amenity-more__desc">An adrenaline-charged zone for the young and young-at-heart. Featuring climbing walls, obstacle courses, and activity stations that transform leisure into an exciting adventure within your own residence.</p>
-                        </div>
-                    </div>
-
-                    <div class="amenity-more__panel amenity-more__panel--light">
-                        <div class="amenity-more__panel-heading">T H E &nbsp;C U R V E</div>
-                        <div class="amenity-more__panel-img"><img src="./assets/images/amenities/amenity-badminton-court.jpg" alt="Badminton Court"></div>
-                        <div class="amenity-more__panel-text">
-                            <span class="amenity-more__label">BADMINTON COURT</span>
-                            <p class="amenity-more__desc">A premium, regulation-standard court with professional-grade flooring and lighting, inviting residents to stay active and connected through sport.</p>
-                        </div>
-                    </div>
-
-                    <div class="amenity-more__panel">
-                        <div class="amenity-more__panel-heading">T H E &nbsp;C U R V E</div>
-                        <div class="amenity-more__panel-img"><img src="./assets/images/amenities/amenity-chill-deck.jpg" alt="Chill Deck"></div>
-                        <div class="amenity-more__panel-text">
-                            <span class="amenity-more__label">CHILL DECK</span>
-                            <p class="amenity-more__desc">An elevated open-air relaxation terrace with plush seating, ambient lighting, and curated greenery. The perfect perch for unwinding above the city.</p>
-                        </div>
-                    </div>
-
-                    <div class="amenity-more__panel amenity-more__panel--light">
-                        <div class="amenity-more__panel-heading">T H E &nbsp;C U R V E</div>
-                        <div class="amenity-more__panel-img"><img src="./assets/images/amenities/amenity-fitness-zone.jpg" alt="Fitness Zone"></div>
-                        <div class="amenity-more__panel-text">
-                            <span class="amenity-more__label">FITNESS ZONE</span>
-                            <p class="amenity-more__desc">A fully-equipped gymnasium featuring smart cardio machines, free weights, and functional training areas. Designed to fuel your peak performance every single day.</p>
-                        </div>
-                    </div>
-
-                    <div class="amenity-more__panel">
-                        <div class="amenity-more__panel-heading">T H E &nbsp;C U R V E</div>
-                        <div class="amenity-more__panel-img"><img src="./assets/images/amenities/amenity-game-lounge.jpg" alt="Game Lounge"></div>
-                        <div class="amenity-more__panel-text">
-                            <span class="amenity-more__label">GAME LOUNGE</span>
-                            <p class="amenity-more__desc">A sophisticated entertainment hub featuring pool tables, foosball, and premium gaming consoles. The ultimate social retreat for friendly competition.</p>
-                        </div>
-                    </div>
-
-                    <div class="amenity-more__panel amenity-more__panel--light">
-                        <div class="amenity-more__panel-heading">T H E &nbsp;C U R V E</div>
-                        <div class="amenity-more__panel-img"><img src="./assets/images/amenities/amenity-grand-ballroom.jpg" alt="Grand Ballroom"></div>
-                        <div class="amenity-more__panel-text">
-                            <span class="amenity-more__label">GRAND BALLROOM</span>
-                            <p class="amenity-more__desc">An opulent, pillar-free banquet hall for 200+ guests. The perfect venue for weddings, receptions, and milestone celebrations of scale and elegance.</p>
-                        </div>
-                    </div>
-
-                    <div class="amenity-more__panel">
-                        <div class="amenity-more__panel-heading">T H E &nbsp;C U R V E</div>
-                        <div class="amenity-more__panel-img"><img src="./assets/images/amenities/amenity-little-nest.jpg" alt="Little Nest"></div>
-                        <div class="amenity-more__panel-text">
-                            <span class="amenity-more__label">LITTLE NEST</span>
-                            <p class="amenity-more__desc">A thoughtfully designed children's play area with vibrant, safe equipment. A dedicated space where your little ones can explore and grow in a secure environment.</p>
-                        </div>
-                    </div>
-
-                    <div class="amenity-more__panel amenity-more__panel--light">
-                        <div class="amenity-more__panel-heading">T H E &nbsp;C U R V E</div>
-                        <div class="amenity-more__panel-img"><img src="./assets/images/amenities/amenity-outdoor-gathering.jpg" alt="Outdoor Gathering"></div>
-                        <div class="amenity-more__panel-text">
-                            <span class="amenity-more__label">OUTDOOR GATHERING</span>
-                            <p class="amenity-more__desc">Landscaped outdoor spaces for community bonding. From morning yoga to festive celebrations, these versatile lawns bring residents together under the open sky.</p>
-                        </div>
-                    </div>
-
-                    <div class="amenity-more__panel">
-                        <div class="amenity-more__panel-heading">T H E &nbsp;C U R V E</div>
-                        <div class="amenity-more__panel-img"><img src="./assets/images/amenities/amenity-social-lounge.jpg" alt="Social Lounge"></div>
-                        <div class="amenity-more__panel-text">
-                            <span class="amenity-more__label">SOCIAL LOUNGE</span>
-                            <p class="amenity-more__desc">An elegantly appointed residents' club with plush seating, a curated library nook, and a warm café counter. The ideal space for meaningful conversations.</p>
-                        </div>
-                    </div>
-
-                    <div class="amenity-more__panel amenity-more__panel--light">
-                        <div class="amenity-more__panel-heading">T H E &nbsp;C U R V E</div>
-                        <div class="amenity-more__panel-img"><img src="./assets/images/amenities/amenity-the-cricle.jpg" alt="The Circle"></div>
-                        <div class="amenity-more__panel-text">
-                            <span class="amenity-more__label">THE CIRCLE</span>
-                            <p class="amenity-more__desc">A unique circular gathering space with a stunning architectural centerpiece. Designed for intimate events, exhibitions, and community showcases.</p>
-                        </div>
-                    </div>
-
-                    <div class="amenity-more__panel">
-                        <div class="amenity-more__panel-heading">T H E &nbsp;C U R V E</div>
-                        <div class="amenity-more__panel-img"><img src="./assets/images/amenities/amenity-theclub.jpg" alt="The Club"></div>
-                        <div class="amenity-more__panel-text">
-                            <span class="amenity-more__label">THE CLUB</span>
-                            <p class="amenity-more__desc">A premium members-only clubhouse offering an upscale ambiance for fine dining, private meetings, and exclusive social engagements.</p>
-                        </div>
-                    </div>
-
-                    <div class="amenity-more__panel amenity-more__panel--light">
-                        <div class="amenity-more__panel-heading">T H E &nbsp;C U R V E</div>
-                        <div class="amenity-more__panel-img"><img src="./assets/images/amenities/amenity-walking-track.jpg" alt="Walking Track"></div>
-                        <div class="amenity-more__panel-text">
-                            <span class="amenity-more__label">WALKING TRACK</span>
-                            <p class="amenity-more__desc">A dedicated, landscaped jogging and walking track through lush greenery. Start your mornings with a refreshing stroll in a serene, car-free environment.</p>
-                        </div>
-                    </div>
-
-                    <div class="amenity-more__panel">
-                        <div class="amenity-more__panel-heading">T H E &nbsp;C U R V E</div>
-                        <div class="amenity-more__panel-img"><img src="./assets/images/amenities/amenity-wellness-studio.jpg" alt="Wellness Studio"></div>
-                        <div class="amenity-more__panel-text">
-                            <span class="amenity-more__label">WELLNESS STUDIO</span>
-                            <p class="amenity-more__desc">A tranquil sanctuary for yoga, pilates, and meditation. Flooded with natural light, designed to restore balance and inner peace.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
 
         
 
-        <!-- ============================================================
-             SECTION 6.5: GALLERY PREVIEW
-             ============================================================ -->
-        <section class="gallery-preview" id="gallery-preview" data-scroll-section>
-            
-            <div class="gallery-preview__top-text">T H E&nbsp;&nbsp;C U R V E</div>
-            
-            <div class="gallery-preview__container">
-                <!-- Decorative side images (optional, hidden on small screens) -->
-                <div class="gallery-preview__side gallery-preview__side--left">
-                    <img src="./assets/images/gallery/gallery-02.jpg" alt="Detail 1">
-                </div>
-                
-                <!-- Main central interactive block -->
-                <div class="gallery-preview__main">
-                    <img src="./assets/images/gallery/gallery-01.jpg" alt="Main Gallery Image">
-                    <div class="gallery-preview__overlay" id="open-gallery-btn">
-                        <div class="gallery-preview__box">
-                            <span class="gallery-preview__view-text">VIEW</span>
-                            <span class="gallery-preview__count-text">/ 6 PHOTOS</span>
-                            <h2 class="gallery-preview__title">GALLERY</h2>
-                            <svg class="gallery-preview__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="gallery-preview__side gallery-preview__side--right">
-                    <img src="./assets/images/gallery/gallery-03.jpg" alt="Detail 2">
+
+        <!-- ============================================================
+             SECTION 5: GALLERY
+             ============================================================ -->
+        <section class="gallery-new" id="gallery">
+            <div class="gallery-new__header text-center">
+                <h2 class="gallery-new__title">GALLERY</h2>
+                <div class="gallery-new__divider">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M12 2L2 22h20L12 2z"/></svg>
+                </div>
+            </div>
+            
+            <!-- Horizontal Moveable Gallery Container -->
+            <div class="gallery-new__track-container">
+                <div class="gallery-new__track">
+                    <img src="assets/images/gallery/gallery-01.jpg" alt="Gallery 1" class="gallery-new__img">
+                    <img src="assets/images/gallery/gallery-02.jpg" alt="Gallery 2" class="gallery-new__img">
+                    <img src="assets/images/gallery/gallery-03.jpg" alt="Gallery 3" class="gallery-new__img">
+                    <img src="assets/images/gallery/gallery-04.jpg" alt="Gallery 4" class="gallery-new__img">
+                    <img src="assets/images/gallery/gallery-05.jpg" alt="Gallery 5" class="gallery-new__img">
+                    <img src="assets/images/gallery/gallery-06.jpg" alt="Gallery 6" class="gallery-new__img">
+                    <!-- Duplicate for infinite scroll effect -->
+                    <img src="assets/images/gallery/gallery-01.jpg" alt="Gallery 1" class="gallery-new__img">
+                    <img src="assets/images/gallery/gallery-02.jpg" alt="Gallery 2" class="gallery-new__img">
+                    <img src="assets/images/gallery/gallery-03.jpg" alt="Gallery 3" class="gallery-new__img">
+                    <img src="assets/images/gallery/gallery-04.jpg" alt="Gallery 4" class="gallery-new__img">
+                    <img src="assets/images/gallery/gallery-05.jpg" alt="Gallery 5" class="gallery-new__img">
+                    <img src="assets/images/gallery/gallery-06.jpg" alt="Gallery 6" class="gallery-new__img">
                 </div>
             </div>
         </section>
 
         <!-- ============================================================
-             SECTION 7: FOOTER & CONTACT
+             SECTION 6: EXPLORE THE PROJECT
              ============================================================ -->
-        <footer class="footer" id="contact" data-scroll-section>
-            <div class="footer__container">
-                <div class="footer__content">
-                    
-                    <div class="footer__info">
-                        <h2 class="footer__title">CONNECT WITH US</h2>
-                        <p class="footer__desc">Experience the pinnacle of luxury living. Schedule a private viewing or request our exclusive brochure.</p>
-                        
-                        <div class="footer__contact-details">
-                            <a href="tel:+919876543210" class="footer__link">+91 98765 43210</a>
-                            <a href="mailto:inquiry@thecurve.com" class="footer__link">inquiry@thecurve.com</a>
-                            <p class="footer__address">The Curve, Viva City Road, Virar West, Mumbai, Maharashtra</p>
+        <section class="explore-new" id="explore">
+            <div class="container text-center">
+                <h2 class="explore-new__title">EXPLORE THE PROJECT</h2>
+                <div class="explore-new__divider">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M12 2L2 22h20L12 2z"/></svg>
+                </div>
+                
+                <div class="explore-new__video" id="video-thumbnail">
+                    <img src="assets/images/gallery/gallery-01.jpg" alt="Video Thumbnail">
+                    <div class="explore-new__play-btn">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="var(--color-accent)"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 7: PROXIMITY
+             ============================================================ -->
+        <section class="proximity-new" id="proximity">
+            <div class="container">
+                <div class="proximity-new__header text-center">
+                    <h2 class="proximity-new__title">PROXIMITY</h2>
+                    <div class="proximity-new__divider">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M12 2L2 22h20L12 2z"/></svg>
+                    </div>
+                </div>
+                
+                <div class="proximity-new__grid">
+                    <div class="proximity-card">
+                        <div class="proximity-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
                         </div>
+                        <h3>TRANSPORT</h3>
+                        <ul>
+                            <li>Virar Station - 7 Min</li>
+                            <li>Rickshaw Stand - 3 Min</li>
+                        </ul>
+                    </div>
+                    <div class="proximity-card">
+                        <div class="proximity-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                        </div>
+                        <h3>EDUCATION</h3>
+                        <ul>
+                            <li>Matrix Academy - 5 Min</li>
+                            <li>Muljibhai Mehta Int. - 7 Min</li>
+                        </ul>
+                    </div>
+                    <div class="proximity-card">
+                        <div class="proximity-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        </div>
+                        <h3>HEALTHCARE</h3>
+                        <ul>
+                            <li>Prakriti Hospital - 4 Min</li>
+                            <li>Rural Hospital - 8 Min</li>
+                        </ul>
+                    </div>
+                    <div class="proximity-card">
+                        <div class="proximity-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                        </div>
+                        <h3>SHOPPING</h3>
+                        <ul>
+                            <li>D-Mart - 8 Min</li>
+                            <li>Star Bazar - 11 Min</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 8: CONNECTIVITY
+             ============================================================ -->
+        <section class="connectivity-new" id="connectivity">
+            <div class="container-fluid px-0">
+                <div class="connectivity-split">
+                    <div class="connectivity-split__map">
+                        <iframe src="https://maps.google.com/maps?q=The+Curve,+Virar+West,+Maharashtra&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" style="filter: grayscale(80%) sepia(20%) contrast(1.1) brightness(1.05);"></iframe>
+                    </div>
+                    <div class="connectivity-split__content">
+                        <h2 class="connectivity-new__title">CONNECTIVITY</h2>
+                        <div class="connectivity-new__divider" style="margin: 1.5rem 0 2rem; display: flex;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M12 2L2 22h20L12 2z"/></svg>
+                        </div>
+                        <p class="connectivity-new__desc">Strategically positioned in Virar West for effortless access to major highways, public transit, and commercial hubs.</p>
+                        <a href="#contact" class="btn btn--outline mt-4">Get Directions</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 9: FLOOR PLANS
+             ============================================================ -->
+        <section class="floorplans-new" id="floorplans-blur">
+            <div class="container text-center">
+                <h2 class="floorplans-new__title">FLOOR PLANS</h2>
+                <div class="floorplans-new__divider" style="margin: 1.5rem 0 4rem; display: flex; justify-content: center;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M12 2L2 22h20L12 2z"/></svg>
+                </div>
+                <div class="floorplans-new__preview">
+                    <img src="assets/images/floorplans/floorplan1.jpg" alt="Floor Plan" class="floorplans-new__blur-img">
+                    <div class="floorplans-new__overlay">
+                        <button class="btn btn--primary" id="view-floorplans-btn">View All Layouts</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 10: WHY INVEST IN VIRAR WEST
+             ============================================================ -->
+        <section class="why-invest section-padding" id="why-invest">
+            <div class="container">
+                <div class="why-invest__header text-center">
+                    <h2 class="why-invest__title" style="font-family: var(--font-display); font-size: clamp(2.5rem, 4.5vw, 3.8rem); font-weight: 300; font-style: italic; color: var(--text-main); letter-spacing: 1px; margin-bottom: 0;">Why Invest in Virar West?</h2>
+                    <div class="why-invest__divider" style="margin: 1.5rem 0 4rem; display: flex; justify-content: center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M12 2L2 22h20L12 2z"/></svg>
+                    </div>
+                </div>
+                
+                <div class="invest-grid">
+                    <div class="invest-card">
+                        <div class="invest-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                        <h3 class="invest-card__title">High ROI & Appreciation</h3>
+                        <p class="invest-card__desc">With rapid infrastructure development, Virar West is witnessing steady property appreciation, making it a highly lucrative investment for the future.</p>
                     </div>
                     
-                    <form class="footer__form">
-                        <div class="footer__input-group">
-                            <input type="text" class="footer__input" placeholder="FULL NAME" required>
+                    <div class="invest-card">
+                        <div class="invest-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5zM6.5 17H20"/></svg>
                         </div>
-                        <div class="footer__input-group">
-                            <input type="tel" class="footer__input" placeholder="PHONE NUMBER" required>
+                        <h3 class="invest-card__title">Upcoming Infrastructure</h3>
+                        <p class="invest-card__desc">The upcoming infrastructure projects like Multi-Modal Corridor and coastal road extensions will drastically reduce commute times.</p>
+                    </div>
+                    
+                    <div class="invest-card">
+                        <div class="invest-card__icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                         </div>
-                        <div class="footer__input-group">
-                            <input type="email" class="footer__input" placeholder="EMAIL ADDRESS">
-                        </div>
-                        <button type="submit" class="btn btn--solid footer__btn">REQUEST CALL BACK</button>
-                    </form>
+                        <h3 class="invest-card__title">Premium Lifestyle Hub</h3>
+                        <p class="invest-card__desc">Transitioning into a self-sustained micro-market with top-tier schools, multispecialty hospitals, and vibrant retail spaces.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- ============================================================
+             SECTION 11: BLOGS
+             ============================================================ -->
+        <section class="blogs section-padding" id="blogs">
+            <div class="container">
+                <div class="configuration__header">
+                    <h4 class="section-eyebrow">Insights</h4>
+                    <h2 class="section-title">Latest Articles</h2>
+                    <p class="section-desc" style="margin: 0 auto;">Read our latest thoughts on real estate trends, luxury living, and interior design.</p>
                 </div>
 
-                <div class="footer__bottom">
-                    <!-- Massive Footer Logo matching Hero -->
-                    <div class="footer__huge-logo">
-                        <span>T</span>
-                        <span>H</span>
-                        <span>E</span>
-                        <span>&nbsp;</span>
-                        <span>C</span>
-                        <span>U</span>
-                        <span>R</span>
-                        <span>V</span>
-                        <span>E</span>
-                    </div>
-                    
-                    <div class="footer__legal">
-                        <p>&copy; 2026 The Curve Residences. All rights reserved.</p>
-                        <div class="footer__socials">
-                            <a href="#">INSTAGRAM</a>
-                            <a href="#">FACEBOOK</a>
+                <div class="blogs__grid">
+                    <a href="#" class="blog-card">
+                        <div class="blog-card__img">
+                            <img src="assets/images/gallery/gallery-01.jpg" alt="Real Estate Trends">
+                        </div>
+                        <div class="blog-card__content">
+                            <span class="blog-card__date">March 15, 2026</span>
+                            <h3 class="blog-card__title">The Future of Luxury Real Estate in Virar</h3>
+                            <p class="blog-card__desc">Discover why Virar is becoming the new hotspot for premium residential properties and what it means for investors.</p>
+                            <span class="blog-card__link">Read Article &rarr;</span>
+                        </div>
+                    </a>
+
+                    <a href="#" class="blog-card">
+                        <div class="blog-card__img">
+                            <img src="assets/images/gallery/gallery-02.jpg" alt="Interior Design">
+                        </div>
+                        <div class="blog-card__content">
+                            <span class="blog-card__date">February 28, 2026</span>
+                            <h3 class="blog-card__title">Minimalist Elegance: Designing Your Space</h3>
+                            <p class="blog-card__desc">Expert tips on how to maximize your floor plan while maintaining a clean, luxurious aesthetic.</p>
+                            <span class="blog-card__link">Read Article &rarr;</span>
+                        </div>
+                    </a>
+
+                    <a href="#" class="blog-card">
+                        <div class="blog-card__img">
+                            <img src="assets/images/gallery/gallery-03.jpg" alt="Smart Homes">
+                        </div>
+                        <div class="blog-card__content">
+                            <span class="blog-card__date">February 10, 2026</span>
+                            <h3 class="blog-card__title">Integrating Smart Home Technology</h3>
+                            <p class="blog-card__desc">How home automation is reshaping the luxury living experience and enhancing security.</p>
+                            <span class="blog-card__link">Read Article &rarr;</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 10: FAQ
+             ============================================================ -->
+        <section class="faq section-padding" id="faq">
+            <div class="container faq__container">
+                <div class="configuration__header">
+                    <h4 class="section-eyebrow">Questions</h4>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+
+                <div class="faq__list">
+                    <div class="faq-item">
+                        <button class="faq-item__btn">
+                            <span class="faq-item__question">What configurations are available at The Curve?</span>
+                            <span class="faq-item__icon">+</span>
+                        </button>
+                        <div class="faq-item__content">
+                            <p>We offer premium 1 BHK, 2 BHK, and exclusive Jodi apartments, all designed with maximum space utilization and Vastu compliance in mind.</p>
                         </div>
                     </div>
+
+                    <div class="faq-item">
+                        <button class="faq-item__btn">
+                            <span class="faq-item__question">When is the expected possession date?</span>
+                            <span class="faq-item__icon">+</span>
+                        </button>
+                        <div class="faq-item__content">
+                            <p>The project is progressing rapidly and the expected possession date is December 2026. Please contact our sales team for exact timelines.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-item__btn">
+                            <span class="faq-item__question">Is the project RERA registered?</span>
+                            <span class="faq-item__icon">+</span>
+                        </button>
+                        <div class="faq-item__content">
+                            <p>Yes, The Curve is a fully MahaRERA registered project. The RERA registration details are available upon request and on the official website.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-item__btn">
+                            <span class="faq-item__question">Are there any financial tie-ups for home loans?</span>
+                            <span class="faq-item__icon">+</span>
+                        </button>
+                        <div class="faq-item__content">
+                            <p>Yes, we have tie-ups with all major nationalized and private banks (SBI, HDFC, ICICI, etc.) for easy and quick home loan approvals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 12: CONTACT
+             ============================================================ -->
+        <section class="contact-new" id="contact">
+            <div class="contact-new__map">
+                <iframe src="https://maps.google.com/maps?q=The+Curve,+Virar+West,+Maharashtra&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" style="filter: grayscale(100%) opacity(0.5);"></iframe>
+            </div>
+            <div class="container contact-new__container">
+                <div class="contact-new__card">
+                    <h2 class="contact-new__title">ENQUIRE NOW</h2>
+                    <p class="contact-new__desc">Register your interest to get priority access, exclusive offers, and detailed floor plans.</p>
+                    <form class="contact-new__form">
+                        <input type="text" placeholder="Full Name" required class="contact-new__input">
+                        <input type="tel" placeholder="Phone Number" required class="contact-new__input">
+                        <input type="email" placeholder="Email Address" class="contact-new__input">
+                        <button type="submit" class="btn btn--primary w-full">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             SECTION 13: FOOTER
+             ============================================================ -->
+        <footer class="footer-new">
+            <div class="container text-center">
+                <div class="footer-new__logo">
+                    <img src="assets/images/logo.png" alt="The Curve" style="max-height: 80px; filter: brightness(0) invert(1);">
+                </div>
+                <h3 class="footer-new__title">THE CURVE</h3>
+                <p class="footer-new__address">Viva City Road, Virar West, Mumbai, Maharashtra 401303</p>
+                <div class="footer-new__links">
+                    <a href="#about">About</a>
+                    <a href="#amenities">Amenities</a>
+                    <a href="#configuration">Configurations</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#location">Location</a>
+                </div>
+                <div class="footer-new__bottom">
+                    <p>&copy; 2026 The Curve. All Rights Reserved. MahaRERA: P990000XXXXX</p>
                 </div>
             </div>
         </footer>

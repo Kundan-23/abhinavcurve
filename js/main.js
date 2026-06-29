@@ -206,81 +206,54 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // 9. Layouts Tab Switching
-    const layoutTabs = document.querySelectorAll('.layouts__tab');
-    const layoutItems = document.querySelectorAll('.layouts__item');
+    const layoutTabs = document.querySelectorAll('.tabs__btn');
+    const layoutItems = document.querySelectorAll('.tabs__pane');
 
     layoutTabs.forEach(tab => {
         tab.addEventListener('click', () => {
             // Remove active class from all tabs
-            layoutTabs.forEach(t => t.classList.remove('is-active'));
+            layoutTabs.forEach(t => t.classList.remove('active'));
             // Add active class to clicked tab
-            tab.classList.add('is-active');
+            tab.classList.add('active');
 
             // Hide all layout items
             layoutItems.forEach(item => {
-                item.classList.remove('is-active');
+                item.classList.remove('active');
             });
 
             // Show target layout item
-            const targetId = tab.getAttribute('data-target');
+            const targetId = tab.getAttribute('data-tab');
             const targetItem = document.getElementById(targetId);
             if (targetItem) {
-                targetItem.classList.add('is-active');
+                targetItem.classList.add('active');
             }
         });
     });
 
-    // 10. Amenities Scroll Slides — Stack / Pin all 5
-    const amenitySlides = document.querySelectorAll('.amenity-slide');
-    
-    amenitySlides.forEach((slide, index) => {
-        // Pin EVERY slide so the next one scrolls over it.
-        // GSAP's ScrollTrigger will automatically release each pin
-        // when the NEXT slide's pin begins.
-        ScrollTrigger.create({
-            trigger: slide,
-            start: 'top top',
-            pin: true,
-            pinSpacing: false
-        });
+    // Amenities section uses standard CSS grid now. No GSAP needed here.
 
-        // Simple fade-in only — no scale/translate to keep GPU load low
-        gsap.fromTo(slide,
-            { opacity: 0 },
-            {
-                opacity: 1,
-                duration: 0.6,
-                ease: 'power2.out',
-                scrollTrigger: { trigger: slide, start: 'top 80%', once: true }
-            }
-        );
-    });
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const btn = item.querySelector('.faq-item__btn');
+        const content = item.querySelector('.faq-item__content');
 
-    // 10.5 Horizontal Scroll for Remaining Amenities (Full-Screen Panels)
-    const amenityMoreSection = document.querySelector('.amenity-more');
-    const amenityMorePanels  = document.querySelector('.amenity-more__panels');
-    
-    if (amenityMoreSection && amenityMorePanels && window.innerWidth > 1024) {
-        // Use requestAnimationFrame to ensure layout is settled before measuring
-        requestAnimationFrame(() => {
-            // Total horizontal scroll distance = total width of all panels minus 1 viewport
-            const totalPanels = amenityMorePanels.querySelectorAll('.amenity-more__panel').length;
-            const scrollDistance = (totalPanels - 1) * window.innerWidth;
+        btn.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
             
-            gsap.to(amenityMorePanels, {
-                x: -scrollDistance,
-                ease: 'none',
-                scrollTrigger: {
-                    trigger: amenityMoreSection,
-                    pin: true,
-                    scrub: 1,
-                    start: 'top top',
-                    end: () => '+=' + scrollDistance,
-                    invalidateOnRefresh: true
-                }
+            // Close all other items
+            faqItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+                otherItem.querySelector('.faq-item__content').style.maxHeight = null;
             });
+
+            // Toggle current item
+            if (!isActive) {
+                item.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }
         });
-    }
+    });
 
     // 11. Gallery Preview & Modals
     const openGalleryBtn = document.getElementById('open-gallery-btn');
@@ -382,7 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 10. Header Theme Toggling
+    // 10. Header Theme Toggling + Scroll Shadow
     const header = document.querySelector('.header');
     if (header) {
         header.classList.add('header--light-text'); // Start white on Hero
@@ -399,6 +372,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 onLeaveBack: () => header.classList.remove('header--light-text')
             });
         });
+
+        // Add shadow on scroll for premium depth effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }, { passive: true });
     }
 
     // 11. Scroll to Top on Logo Click
