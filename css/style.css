@@ -1660,7 +1660,7 @@ img { display: block; max-width: 100%; height: auto; }
     letter-spacing: 1px;
 }
 .explore-new__divider {
-    margin: 1.5rem 0 4rem;
+    margin: 1.5rem 0;
     display: flex;
     justify-content: center;
 }
