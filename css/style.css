@@ -41,7 +41,7 @@ html, body {
     padding: 0;
     width: 100%;
     min-height: 100%;
-    overflow-x: clip !important;
+    overflow-x: hidden !important;
     overflow-y: auto !important; /* Force vertical scrolling */
 }
 a { color: inherit; text-decoration: none; }
@@ -1291,10 +1291,9 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 .gallery-new__track-container {
-    width: 100vw;
+    width: 100%;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    overflow: hidden;
 }
 
 .gallery-new__track {
