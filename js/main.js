@@ -399,5 +399,31 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.TheCurve && typeof window.TheCurve.initAnimations === 'function') {
         window.TheCurve.initAnimations();
     }
+    // 13. Amenities Interactive Showcase
+    const amenityItems = document.querySelectorAll('.amenity-list-item');
+    const showcaseImg = document.getElementById('amenity-showcase-img');
+    
+    if (amenityItems.length && showcaseImg) {
+        amenityItems.forEach(item => {
+            const handleInteract = () => {
+                if (item.classList.contains('active')) return;
+                
+                amenityItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+
+                const newImgSrc = item.getAttribute('data-image');
+                if (newImgSrc && !showcaseImg.src.includes(newImgSrc)) {
+                    showcaseImg.classList.add('fade-out');
+                    setTimeout(() => {
+                        showcaseImg.src = newImgSrc;
+                        showcaseImg.classList.remove('fade-out');
+                    }, 250);
+                }
+            };
+
+            item.addEventListener('mouseenter', handleInteract);
+            item.addEventListener('click', handleInteract);
+        });
+    }
 
 });
