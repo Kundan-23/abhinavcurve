@@ -1990,45 +1990,193 @@ img { display: block; max-width: 100%; height: auto; }
    FOOTER
    ============================================================ */
 .footer-new {
-    background: var(--bg-deep); /* #050505 */
+    background-color: var(--bg-main);
+    background-image: linear-gradient(135deg, rgba(184, 150, 62, 0.05) 0%, rgba(184, 150, 62, 0) 100%);
     padding: 6rem 0 2rem;
     color: var(--text-main);
+    border-top: 1px solid rgba(184, 150, 62, 0.2);
 }
-.footer-new__logo {
-    margin-bottom: 1rem;
+
+.footer-new .container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
 }
-.footer-new__title {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    letter-spacing: 4px;
-    margin-bottom: 0.5rem;
-    color: var(--color-accent);
-}
-.footer-new__address {
-    color: var(--text-muted);
-    font-size: 0.95rem;
+
+/* 1. Logos */
+.footer-new__logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
     margin-bottom: 2rem;
 }
-.footer-new__links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-bottom: 4rem;
+
+.footer-new__logos img {
+    max-height: 80px;
+    object-fit: contain;
 }
-.footer-new__links a {
+
+.footer-new__logo-divider {
+    width: 2px;
+    height: 60px;
+    background-color: var(--border-gold);
+}
+
+/* 2. About */
+.footer-new__about {
+    margin-bottom: 2.5rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.8;
     color: var(--text-main);
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
+    opacity: 0.9;
 }
-.footer-new__links a:hover {
-    color: var(--color-accent);
+
+/* 3. Social */
+.footer-new__social {
+    margin-bottom: 2rem;
 }
-.footer-new__bottom {
-    border-top: 1px solid rgba(255,255,255,0.05);
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #d13030;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.social-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* 4. Contact */
+.footer-new__contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+@media (min-width: 768px) {
+    .footer-new__contact {
+        flex-direction: row;
+        gap: 3rem;
+    }
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* 5. Address */
+.footer-new__address {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+/* 6. QR & RERA */
+.footer-new__rera-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
     padding-top: 2rem;
-    color: var(--text-muted);
+    border-top: 1px solid rgba(184, 150, 62, 0.2);
+}
+
+@media (min-width: 768px) {
+    .footer-new__rera-block {
+        flex-direction: row;
+        gap: 6rem;
+    }
+}
+
+.qr-code-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.qr-placeholder {
+    width: 100px; 
+    height: 100px; 
+    border: 2px solid var(--text-main); 
+    padding: 5px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-placeholder svg {
+    width: 100%;
+    height: 100%;
+}
+
+.qr-text {
     font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--gold);
+}
+
+.rera-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.rera-logo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rera-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.rera-text strong {
+    font-size: 1rem;
+    color: #d13030;
+    letter-spacing: 0.5px;
+}
+
+.rera-text span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* 7. Disclaimer */
+.footer-new__disclaimer {
+    border-top: 1px solid rgba(184, 150, 62, 0.2);
+    padding-top: 2rem;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    text-align: justify;
 }
