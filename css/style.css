@@ -824,46 +824,50 @@ img { display: block; max-width: 100%; height: auto; }
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    padding: 2rem 1rem;
-    background: var(--bg-card);
-    border: var(--border-subtle);
-    transition: all 0.35s var(--ease-expo);
+    justify-content: center;
+    gap: 1.2rem;
+    padding: 2.5rem 1rem;
+    background: linear-gradient(145deg, #ffffff, var(--bg-card));
+    border: var(--border-gold);
+    border-radius: 8px;
+    transition: all 0.4s var(--ease-expo);
     cursor: default;
     color: var(--text-main);
+    box-shadow: var(--shadow-soft);
 }
 
 .amenity-icon-card:hover {
     background: #fff;
     border-color: var(--gold);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-medium);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(184, 150, 62, 0.15);
 }
 
 .amenity-icon-card svg {
-    width: 40px;
-    height: 40px;
-    color: #8C6F2A; /* Darker Gold for more contrast */
-    transition: color 0.35s ease;
+    width: 44px;
+    height: 44px;
+    color: var(--gold);
+    transition: transform 0.4s var(--ease-expo), color 0.4s ease;
 }
 
 .amenity-icon-card:hover svg {
+    transform: scale(1.15);
     color: var(--gold-light);
 }
 
 .amenity-icon-card span {
     font-family: var(--font-body);
-    font-size: 0.78rem;
-    font-weight: 400;
-    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-main);
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    transition: color 0.35s ease;
+    letter-spacing: 0.12em;
+    transition: color 0.4s ease;
 }
 
 .amenity-icon-card:hover span {
-    color: rgba(250,247,242,0.8);
+    color: var(--gold);
 }
 
 /* ── BLOGS (SECTION 9) ── */
