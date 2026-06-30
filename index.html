@@ -39,8 +39,10 @@
          ============================================================ -->
     <header class="header" id="header">
         <div class="header__inner">
-            <a href="#" class="header__logo-link" id="scroll-to-top">
-                <img src="assets/images/logos/The Curve Final Logo .png" alt="The Curve" class="header__logo">
+            <a href="#" class="header__logo-link" id="scroll-to-top" style="display: flex; align-items: center; gap: 15px;">
+                <img src="assets/images/logos/The Curve Final Logo .png" alt="The Curve" class="header__logo" style="max-height: 40px; width: auto;">
+                <span style="font-size: 1.2rem; color: var(--gold); opacity: 0.5;">|</span>
+                <img src="assets/images/logos/abhinav-group-logo.png" alt="Abhinav Group" class="header__logo" style="max-height: 40px; width: auto;">
             </a>
             
             <nav class="header__nav is-hidden-mobile">
@@ -107,44 +109,6 @@
                     <p class="about-new__text">
                         We Believe In Delivering Excellence Wherever We Go, And With Our Latest Global City Project, The Curve, We Bring The Very Best To Life. Nestled In The Heart Of Virar West, The Curve Is Where Luxury Feels Personal And Effortless. Every Corner Is Designed To Offer Serenity, Comfort, And Understated Elegance. It's More Than A Residence, It's A Place Where You Truly Feel At Home, Thoughtfully Crafted To Reflect Your Lifestyle And Aspirations.
                     </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================================
-             SECTION 4: CONFIGURATION
-             ============================================================ -->
-        <section class="configuration-new" id="configuration">
-            <div class="container">
-                <div class="configuration-new__header animate-fade-up">
-                    <h2 class="configuration-new__title text-center" style="font-family: var(--font-display); font-size: clamp(2.5rem, 4.5vw, 3.8rem); font-weight: 300; font-style: italic; color: var(--text-main); letter-spacing: 1px; margin-bottom: 0;">Configuration</h2>
-                    <div class="configuration-new__divider" style="margin: 1.5rem 0 4rem; display: flex; justify-content: center;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M12 2L2 22h20L12 2z"/></svg>
-                    </div>
-                </div>
-                
-                <div class="configuration-new__grid" data-reveal-group>
-                    <!-- 1 BHK -->
-                    <div class="config-vcard animate-fade-up">
-                        <h3 class="config-vcard__title">1 BHK</h3>
-                        <p class="config-vcard__desc">Designed for Individuals</p>
-                        <div class="config-vcard__line"></div>
-                        <a href="#contact" class="btn btn--primary w-full">Enquire Now</a>
-                    </div>
-                    <!-- 2 BHK -->
-                    <div class="config-vcard animate-fade-up" style="transition-delay: 100ms;">
-                        <h3 class="config-vcard__title">2 BHK</h3>
-                        <p class="config-vcard__desc">Designed for Families</p>
-                        <div class="config-vcard__line"></div>
-                        <a href="#contact" class="btn btn--primary w-full">Enquire Now</a>
-                    </div>
-                    <!-- Jodi -->
-                    <div class="config-vcard animate-fade-up" style="transition-delay: 200ms;">
-                        <h3 class="config-vcard__title">JODI</h3>
-                        <p class="config-vcard__desc">Designed for Luxury</p>
-                        <div class="config-vcard__line"></div>
-                        <a href="#contact" class="btn btn--primary w-full">Enquire Now</a>
-                    </div>
                 </div>
             </div>
         </section>
@@ -220,6 +184,45 @@
         
 
 
+
+
+        <!-- ============================================================
+             SECTION 4: CONFIGURATION
+             ============================================================ -->
+        <section class="configuration-new" id="configuration">
+            <div class="container">
+                <div class="configuration-new__header animate-fade-up">
+                    <h2 class="configuration-new__title text-center" style="font-family: var(--font-display); font-size: clamp(2.5rem, 4.5vw, 3.8rem); font-weight: 700; font-style: italic; color: var(--text-main); letter-spacing: 1px; margin-bottom: 0;">Configuration</h2>
+                    <div class="configuration-new__divider" style="margin: 1.5rem 0 4rem; display: flex; justify-content: center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M12 2L2 22h20L12 2z"/></svg>
+                    </div>
+                </div>
+                
+                <div class="configuration-new__grid" data-reveal-group>
+                    <!-- 1 BHK -->
+                    <div class="config-vcard animate-fade-up">
+                        <h3 class="config-vcard__title">1 BHK</h3>
+                        <p class="config-vcard__desc">Designed for Individuals</p>
+                        <div class="config-vcard__line"></div>
+                        <a href="#contact" class="btn btn--primary w-full">Enquire Now</a>
+                    </div>
+                    <!-- 2 BHK -->
+                    <div class="config-vcard animate-fade-up" style="transition-delay: 100ms;">
+                        <h3 class="config-vcard__title">2 BHK</h3>
+                        <p class="config-vcard__desc">Designed for Families</p>
+                        <div class="config-vcard__line"></div>
+                        <a href="#contact" class="btn btn--primary w-full">Enquire Now</a>
+                    </div>
+                    <!-- Jodi -->
+                    <div class="config-vcard animate-fade-up" style="transition-delay: 200ms;">
+                        <h3 class="config-vcard__title">JODI</h3>
+                        <p class="config-vcard__desc">Designed for Luxury</p>
+                        <div class="config-vcard__line"></div>
+                        <a href="#contact" class="btn btn--primary w-full">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- ============================================================
              SECTION 5: FEATURED AMENITIES (Replaced Gallery)
@@ -538,7 +541,7 @@
         <section class="why-invest section-padding" id="why-invest">
             <div class="container">
                 <div class="why-invest__header text-center animate-fade-up">
-                    <h2 class="why-invest__title" style="font-family: var(--font-display); font-size: clamp(2.5rem, 4.5vw, 3.8rem); font-weight: 300; font-style: italic; color: var(--text-main); letter-spacing: 1px; margin-bottom: 0;">Why Invest in Virar West?</h2>
+                    <h2 class="why-invest__title" style="font-family: var(--font-display); font-size: clamp(2.5rem, 4.5vw, 3.8rem); font-weight: 700; font-style: italic; color: var(--text-main); letter-spacing: 1px; margin-bottom: 0;">Why Invest in Virar West?</h2>
                     <div class="why-invest__divider" style="margin: 1.5rem 0 4rem; display: flex; justify-content: center;">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="1.5"><path d="M12 2L2 22h20L12 2z"/></svg>
                     </div>
