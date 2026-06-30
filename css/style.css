@@ -292,7 +292,7 @@ img { display: block; max-width: 100%; height: auto; }
     cursor: pointer;
 }
 .btn--primary {
-    background-object-fit: contain;
+    background-color: var(--gold);
     color: #ffffff;
     border: none;
 }
@@ -336,7 +336,6 @@ img { display: block; max-width: 100%; height: auto; }
     font-family: var(--font-display);
     font-size: clamp(2.4rem, 4.5vw, 4.5rem);
     font-weight: 700;
-    font-style: italic;
     color: var(--text-main);
     line-height: 1.15;
     margin-bottom: 1.5rem;
@@ -594,12 +593,12 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 .config-vcard__desc {
-    font-family: var(--font-body);
-    font-size: 0.8rem;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-style: italic;
     color: var(--text-muted);
     margin-bottom: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.05em;
 }
 
 .config-vcard__line {
