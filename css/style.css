@@ -327,6 +327,19 @@ img { display: block; max-width: 100%; height: auto; }
     height: 100%;
     object-fit: cover;
 }
+@media (max-width: 767px) {
+    .hero {
+        height: auto;
+    }
+    .hero__bg {
+        position: relative;
+    }
+    .hero__picture, .hero__img {
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+}
 
 .btn {
     display: inline-flex;
