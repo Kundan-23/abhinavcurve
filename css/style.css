@@ -1583,7 +1583,7 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 @media (max-width: 768px) {
-    .gallery-new__img {
+    .gallery-new__item {
         height: 250px;
         width: 350px;
     }
