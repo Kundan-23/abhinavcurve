@@ -48,6 +48,19 @@ a { color: inherit; text-decoration: none; }
 button { background: none; border: none; cursor: pointer; color: inherit; }
 img { display: block; max-width: 100%; height: auto; }
 
+/* Visually hidden — accessible to screen readers and search engines, invisible on screen */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 /* ── UTILITIES ── */
 .is-hidden-mobile { display: none; }
 @media (min-width: 768px) { .is-hidden-mobile { display: block; } }
