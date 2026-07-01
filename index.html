@@ -1163,6 +1163,14 @@
                 resultEl.textContent = successMsg;
                 form.reset();
                 submitBtn.textContent = '✓ Sent!';
+                
+                // If it's the modal form, save in local storage to stop recurring popups
+                if (form.id === 'lead-form') {
+                    localStorage.setItem('curve_lead_submitted', 'true');
+                    setTimeout(() => {
+                        document.getElementById('lead-modal').classList.remove('is-active');
+                    }, 2000); // auto close after 2 seconds
+                }
             } else {
                 resultEl.style.display = 'block';
                 resultEl.style.color = '#e74c3c';

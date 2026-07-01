@@ -360,12 +360,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (leadForm && layoutsWrapper) {
         leadForm.addEventListener('submit', (e) => {
-            e.preventDefault(); // Prevent page reload
-            
-            // In a real app, send data to server here.
-            // For now, simulate success:
-            closeLeadModal();
-            
+            // Note: actual submission is handled by index.html fetch script
             // Unlock the floor plans
             layoutsWrapper.classList.add('is-unlocked');
             
@@ -373,6 +368,32 @@ document.addEventListener('DOMContentLoaded', () => {
             const firstTab = document.querySelector('.layouts__tab[data-target="layout-1bhk"]');
             if(firstTab) firstTab.click();
         });
+    }
+
+    // --- RECURRING MODAL LOGIC (EVERY 15 SECONDS) ---
+    let popupTimer;
+    
+    function scheduleNextPopup() {
+        // Only schedule if they haven't submitted the form yet
+        if (localStorage.getItem('curve_lead_submitted') !== 'true') {
+            popupTimer = setTimeout(() => {
+                if (leadModal && !leadModal.classList.contains('is-active')) {
+                    leadModal.classList.add('is-active');
+                }
+            }, 15000); // 15 seconds
+        }
+    }
+
+    // Start the first timer when page loads
+    scheduleNextPopup();
+
+    // Whenever they close the modal, start the timer again
+    function closeLeadModal() {
+        if(leadModal) {
+            leadModal.classList.remove('is-active');
+            clearTimeout(popupTimer);
+            scheduleNextPopup();
+        }
     }
 
     // 10. Header Theme Toggling + Scroll Shadow
