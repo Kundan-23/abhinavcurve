@@ -10,6 +10,9 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Preload Mobile Hero Image for faster LCP -->
+    <link rel="preload" as="image" href="assets/images/hero/hero-mobile.jpg" media="(max-width: 767px)">
 </head>
 <body class="loading">
 
@@ -90,7 +93,7 @@
             <!-- Background Layer Only -->
             <div class="hero__bg">
                 <picture class="hero__picture">
-                    <source media="(max-width: 767px)" srcset="assets/images/hero/hero-mobile.png">
+                    <source media="(max-width: 767px)" srcset="assets/images/hero/hero-mobile.jpg">
                     <img src="assets/images/hero/hero-main11.jpg" alt="The Curve Residence" class="hero__img">
                 </picture>
             </div>
