@@ -1537,7 +1537,15 @@ img { display: block; max-width: 100%; height: auto; }
     .gallery-new__content {
         opacity: 1;
         transform: translateY(0);
-        background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 100%);
+        background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 100%);
+        padding: 1.5rem 1rem 1rem;
+    }
+    .gallery-new__item-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.2rem;
+    }
+    .gallery-new__item-desc {
+        font-size: 0.9rem;
     }
 }
 
@@ -1584,8 +1592,8 @@ img { display: block; max-width: 100%; height: auto; }
 
 @media (max-width: 768px) {
     .gallery-new__item {
-        height: 250px;
-        width: 350px;
+        height: 320px;
+        width: 85vw;
     }
 }
 
