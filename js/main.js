@@ -491,4 +491,90 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ============================================================
+    // 14. Article Reader Modal
+    // ============================================================
+    const articleData = {
+        'article-1': {
+            title: 'The Future of Luxury Real Estate in Virar',
+            date: 'March 15, 2026',
+            image: 'assets/images/gallery/gallery-01.jpg',
+            content: `
+                <p>Virar West is rapidly transforming into a premium residential hub, attracting homebuyers and investors looking for luxury flats in Mumbai. With major infrastructure developments like the upcoming Bullet Train project and the coastal road extension, connectivity to South Mumbai and key business districts is faster than ever.</p>
+                <h3>Why Invest in a 2 BHK or 3 BHK in Virar West?</h3>
+                <p>Historically seen as an affordable market, Virar has seen a paradigm shift. Today, buyers aren't just looking for four walls; they are looking for lifestyle upgrades. MahaRERA registered projects in Virar are now offering world-class amenities—from rooftop infinity pools to smart home automation—matching the standards of prime Mumbai real estate.</p>
+                <ul>
+                    <li><strong>Unmatched ROI:</strong> Property rates in Virar West have shown consistent appreciation, making it a highly lucrative investment for those buying 2 BHK and 3 BHK luxury apartments.</li>
+                    <li><strong>Space & Serenity:</strong> Unlike the congested city center, premium projects here, like The Curve by Abhinav Group, offer expansive floor plans and Jodi flats, ensuring you have the space to breathe without compromising on luxury.</li>
+                </ul>
+                <p>If you are looking to buy a 2 BHK flat in Virar or upgrade to a 3 BHK luxury apartment, now is the ideal time to invest before the next wave of infrastructure-driven price appreciation hits.</p>
+            `
+        },
+        'article-2': {
+            title: 'Minimalist Elegance: Designing Your Space',
+            date: 'February 28, 2026',
+            image: 'assets/images/gallery/gallery-02.jpg',
+            content: `
+                <p>When it comes to luxury home interiors, the philosophy of "less is more" is dominating modern architecture. Minimalist elegance focuses on maximizing natural light, utilizing open floor plans, and selecting premium, understated materials that speak for themselves.</p>
+                <h3>Maximizing Space in 2 BHK & Jodi Flats</h3>
+                <p>Designing a spacious apartment in Mumbai requires smart spatial planning. At The Curve Virar West, our Vastu-compliant layouts are crafted to offer zero wastage of space. But how you furnish it makes all the difference:</p>
+                <ul>
+                    <li><strong>Neutral Palettes:</strong> Stick to whites, beiges, and soft greys. These colors reflect light, making your 2 BHK floor plan look significantly larger.</li>
+                    <li><strong>Multifunctional Furniture:</strong> Opt for sleek, built-in storage solutions that keep clutter hidden, maintaining the luxurious aesthetic of your premium residential property.</li>
+                    <li><strong>Strategic Lighting:</strong> Use layered lighting—ambient, task, and accent. A statement chandelier combined with recessed LEDs adds incredible depth to the living room.</li>
+                </ul>
+                <p>Whether you're moving into a compact luxury apartment or expansive Jodi flats in Virar West, embracing minimalist design will elevate your everyday living experience to new heights of sophistication.</p>
+            `
+        },
+        'article-3': {
+            title: 'Integrating Smart Home Technology',
+            date: 'February 10, 2026',
+            image: 'assets/images/gallery/gallery-03.jpg',
+            content: `
+                <p>The concept of a luxury apartment in Mumbai has evolved. High-end finishes and lavish amenities are no longer the only benchmarks; the true hallmark of a premium residential project today is seamless home automation. Smart homes are reshaping the way we interact with our living spaces.</p>
+                <h3>The Core Features of a Modern Smart Home</h3>
+                <p>Integrating technology isn't just about convenience; it's about elevated security, energy efficiency, and creating personalized environments. For buyers looking at 3 BHK luxury apartments in Virar, these are the must-have integrations:</p>
+                <ul>
+                    <li><strong>Automated Lighting & Climate:</strong> Control the mood and temperature of your home from your smartphone, ensuring your space is perfect before you even step through the door.</li>
+                    <li><strong>Advanced Security Systems:</strong> Biometric door locks, smart video doorbells, and 24/7 remote surveillance provide absolute peace of mind, a standard feature in top-tier real estate.</li>
+                    <li><strong>Voice-Controlled Ecosystems:</strong> From motorized curtains to home entertainment systems, seamless integration with AI assistants makes managing your home effortless.</li>
+                </ul>
+                <p>At projects like The Curve, luxury amenities extend beyond the physical clubhouse. By bringing the future of tech into every floor plan, residents experience a lifestyle that is truly future-proof.</p>
+            `
+        }
+    };
+
+    const articleModal = document.getElementById('article-modal');
+    const closeArticleBtn = document.getElementById('close-article-btn');
+    const articleBackdrop = document.getElementById('article-modal-backdrop');
+    
+    const articleHeroImg = document.getElementById('article-hero-img');
+    const articleDate = document.getElementById('article-date');
+    const articleTitle = document.getElementById('article-title');
+    const articleText = document.getElementById('article-text');
+
+    document.querySelectorAll('.blog-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.preventDefault();
+            const articleId = card.getAttribute('data-article-id');
+            const data = articleData[articleId];
+            
+            if (data) {
+                articleHeroImg.src = data.image;
+                articleDate.textContent = data.date;
+                articleTitle.textContent = data.title;
+                articleText.innerHTML = data.content;
+                
+                articleModal.classList.add('is-active');
+            }
+        });
+    });
+
+    function closeArticleModal() {
+        if (articleModal) articleModal.classList.remove('is-active');
+    }
+
+    if (closeArticleBtn) closeArticleBtn.addEventListener('click', closeArticleModal);
+    if (articleBackdrop) articleBackdrop.addEventListener('click', closeArticleModal);
+
 });

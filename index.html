@@ -823,7 +823,7 @@
                 </div>
 
                 <div class="blogs__grid">
-                    <a href="#" class="blog-card animate-fade-up">
+                    <a href="#blogs" class="blog-card animate-fade-up" data-article-id="article-1">
                         <div class="blog-card__img">
                             <img src="assets/images/gallery/gallery-01.jpg" alt="Real Estate Trends">
                         </div>
@@ -835,7 +835,7 @@
                         </div>
                     </a>
 
-                    <a href="#" class="blog-card animate-fade-up">
+                    <a href="#blogs" class="blog-card animate-fade-up" data-article-id="article-2">
                         <div class="blog-card__img">
                             <img src="assets/images/gallery/gallery-02.jpg" alt="Interior Design">
                         </div>
@@ -847,7 +847,7 @@
                         </div>
                     </a>
 
-                    <a href="#" class="blog-card animate-fade-up">
+                    <a href="#blogs" class="blog-card animate-fade-up" data-article-id="article-3">
                         <div class="blog-card__img">
                             <img src="assets/images/gallery/gallery-03.jpg" alt="Smart Homes">
                         </div>
@@ -1070,6 +1070,26 @@
                 <button type="submit" class="btn btn--solid" id="lead-submit-btn" style="width: 100%;">ACCESS FLOOR PLANS</button>
                 <p class="form-result" id="lead-form-result" style="display:none; text-align:center; margin-top:1rem; font-size:0.9rem;"></p>
             </form>
+        </div>
+    </div>
+
+    <!-- Article Reader Modal -->
+    <div class="article-modal" id="article-modal">
+        <div class="article-modal__backdrop" id="article-modal-backdrop"></div>
+        <div class="article-modal__content">
+            <button class="article-modal__close" id="close-article-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+            <div class="article-modal__scroll">
+                <img src="" alt="Article Image" class="article-modal__hero" id="article-hero-img">
+                <div class="article-modal__body">
+                    <span class="article-modal__date" id="article-date"></span>
+                    <h2 class="article-modal__title" id="article-title"></h2>
+                    <div class="article-modal__text" id="article-text">
+                        <!-- Content injected via JS -->
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
