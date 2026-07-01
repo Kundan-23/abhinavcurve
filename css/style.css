@@ -215,7 +215,9 @@ img { display: block; max-width: 100%; height: auto; }
         left: 0;
         width: 100%;
         height: 100vh;
-        background: var(--bg-main);
+        background: rgba(250, 248, 245, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -578,7 +580,7 @@ img { display: block; max-width: 100%; height: auto; }
 
 /* ── CONFIGURATIONS (SECTION 4) ── */
 .configuration-new {
-    background: var(--bg-main); /* Warm Ivory */
+    background: var(--bg-dark); /* Warm Ivory */
     padding: 6rem 0;
 }
 
@@ -825,7 +827,7 @@ img { display: block; max-width: 100%; height: auto; }
 
 /* ── AMENITIES (SECTION 3) ── */
 .amenities-new {
-    background-color: var(--bg-main); /* Light Ivory */
+    background-color: var(--bg-dark); /* Light Ivory */
     padding: 6rem 0;
 }
 
@@ -1405,7 +1407,7 @@ img { display: block; max-width: 100%; height: auto; }
    SECTION 5: GALLERY
    ============================================================ */
 .gallery-new {
-    background: var(--bg-main);
+    background: var(--bg-dark);
     padding: 6rem 0;
     overflow: hidden;
     position: relative;
@@ -1793,7 +1795,7 @@ img { display: block; max-width: 100%; height: auto; }
    EXPLORE PROJECT (VIDEO)
    ============================================================ */
 .explore-new {
-    background: var(--bg-main);
+    background: var(--bg-dark);
     padding: 6rem 0;
 }
 .explore-new__title {
@@ -1910,7 +1912,7 @@ img { display: block; max-width: 100%; height: auto; }
    CONNECTIVITY
    ============================================================ */
 .connectivity-new {
-    background: var(--bg-main);
+    background: var(--bg-dark);
 }
 .connectivity-split {
     display: flex;
@@ -2064,7 +2066,7 @@ img { display: block; max-width: 100%; height: auto; }
    FOOTER
    ============================================================ */
 .footer-new {
-    background-color: var(--bg-main);
+    background-color: var(--bg-dark);
     background-image: linear-gradient(135deg, rgba(184, 150, 62, 0.05) 0%, rgba(184, 150, 62, 0) 100%);
     padding: 6rem 0 2rem;
     color: var(--text-main);
