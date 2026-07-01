@@ -335,9 +335,9 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 .section-title {
-    font-family: var(--font-display);
+    font-family: var(--font-heading);
     font-size: clamp(2.4rem, 4.5vw, 4.5rem);
-    font-weight: 700;
+    font-weight: 500;
     color: var(--text-main);
     line-height: 1.15;
     margin-bottom: 1.5rem;
@@ -429,7 +429,7 @@ img { display: block; max-width: 100%; height: auto; }
     text-align: center;
     font-family: var(--font-display);
     font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 400;
+    font-weight: 700;
     font-style: italic;
     color: var(--text-gold);
     letter-spacing: 2px;
@@ -585,10 +585,9 @@ img { display: block; max-width: 100%; height: auto; }
 
 .config-vcard__title {
     text-align: center;
-    font-family: var(--font-display);
+    font-family: var(--font-heading);
     font-size: 3rem;
-    font-weight: 400;
-    font-style: italic;
+    font-weight: 500;
     color: var(--text-main);
     margin-bottom: 0.3rem;
     letter-spacing: 1px;
@@ -781,10 +780,9 @@ img { display: block; max-width: 100%; height: auto; }
 
 .amenities-new__title {
     text-align: center;
-    font-family: var(--font-display);
+    font-family: var(--font-heading);
     font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 400;
-    font-style: italic;
+    font-weight: 500;
     color: var(--text-main);
     letter-spacing: 1px;
 }
@@ -1386,14 +1384,13 @@ img { display: block; max-width: 100%; height: auto; }
 
 .gallery-new__title {
     text-align: center;
-    font-family: var(--font-display);
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 400;
-    font-style: italic;
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    font-weight: 500;
     color: var(--text-main);
     letter-spacing: 1px;
+    margin-bottom: 1rem;
 }
-
 .gallery-new__divider {
     margin: 1.5rem 0 0;
     display: flex;
@@ -1743,10 +1740,9 @@ img { display: block; max-width: 100%; height: auto; }
 }
 .explore-new__title {
     text-align: center;
-    font-family: var(--font-display);
+    font-family: var(--font-heading);
     font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 400;
-    font-style: italic;
+    font-weight: 500;
     color: var(--text-main);
     letter-spacing: 1px;
 }
@@ -1780,10 +1776,9 @@ img { display: block; max-width: 100%; height: auto; }
 }
 .proximity-new__title {
     text-align: center;
-    font-family: var(--font-display);
+    font-family: var(--font-heading);
     font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 400;
-    font-style: italic;
+    font-weight: 500;
     color: var(--text-main);
     letter-spacing: 1px;
 }
