@@ -957,11 +957,15 @@
                 <div class="contact-new__card animate-fade-up">
                     <h2 class="contact-new__title">ENQUIRE NOW</h2>
                     <p class="contact-new__desc">Register your interest to get priority access, exclusive offers, and detailed floor plans.</p>
-                    <form class="contact-new__form">
-                        <input type="text" placeholder="Full Name" required class="contact-new__input">
-                        <input type="tel" placeholder="Phone Number" required class="contact-new__input">
-                        <input type="email" placeholder="Email Address" class="contact-new__input">
-                        <button type="submit" class="btn btn--primary w-full">SUBMIT</button>
+                    <form class="contact-new__form" id="contact-form">
+                        <input type="hidden" name="access_key" value="a83acddf-a376-4cb2-855e-354ffa1acabb">
+                        <input type="hidden" name="subject" value="New Enquiry — The Curve Virar West">
+                        <input type="hidden" name="from_name" value="The Curve Website">
+                        <input type="text" name="name" placeholder="Full Name" required class="contact-new__input">
+                        <input type="tel" name="phone" placeholder="Phone Number" required class="contact-new__input">
+                        <input type="email" name="email" placeholder="Email Address" class="contact-new__input">
+                        <button type="submit" class="btn btn--primary w-full" id="contact-submit-btn">SUBMIT</button>
+                        <p class="form-result" id="contact-form-result" style="display:none; text-align:center; margin-top:1rem; font-size:0.9rem;"></p>
                     </form>
                 </div>
             </div>
@@ -1049,18 +1053,22 @@
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
             </button>
             <h2 class="lead-modal__title">UNLOCK PREMIUM ACCESS</h2>
-            <p class="lead-modal__desc">Please provide your details to view our exclusive 1, 2, 3 BHK and Penthouse floor plans.</p>
+            <p class="lead-modal__desc">Please provide your details to view our exclusive 2 BHK, 3 BHK and Jodi floor plans.</p>
             <form class="lead-modal__form" id="lead-form">
+                <input type="hidden" name="access_key" value="a83acddf-a376-4cb2-855e-354ffa1acabb">
+                <input type="hidden" name="subject" value="Floor Plan Request — The Curve Virar West">
+                <input type="hidden" name="from_name" value="The Curve Website">
                 <div class="footer__input-group">
-                    <input type="text" class="footer__input" placeholder="FULL NAME" required>
+                    <input type="text" name="name" class="footer__input" placeholder="FULL NAME" required>
                 </div>
                 <div class="footer__input-group">
-                    <input type="tel" class="footer__input" placeholder="PHONE NUMBER" required>
+                    <input type="tel" name="phone" class="footer__input" placeholder="PHONE NUMBER" required>
                 </div>
                 <div class="footer__input-group">
-                    <input type="email" class="footer__input" placeholder="EMAIL ADDRESS">
+                    <input type="email" name="email" class="footer__input" placeholder="EMAIL ADDRESS">
                 </div>
-                <button type="submit" class="btn btn--solid" style="width: 100%;">ACCESS FLOOR PLANS</button>
+                <button type="submit" class="btn btn--solid" id="lead-submit-btn" style="width: 100%;">ACCESS FLOOR PLANS</button>
+                <p class="form-result" id="lead-form-result" style="display:none; text-align:center; margin-top:1rem; font-size:0.9rem;"></p>
             </form>
         </div>
     </div>
@@ -1132,5 +1140,72 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- ============================================================
+         WEB3FORMS — Lead Capture for both Contact form & Modal
+         ============================================================ -->
+    <script>
+    async function handleWeb3Form(form, resultEl, submitBtn, successMsg) {
+        const formData = new FormData(form);
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+            const data = await response.json();
+
+            if (data.success) {
+                resultEl.style.display = 'block';
+                resultEl.style.color = '#c9a96e';
+                resultEl.textContent = successMsg;
+                form.reset();
+                submitBtn.textContent = '✓ Sent!';
+            } else {
+                resultEl.style.display = 'block';
+                resultEl.style.color = '#e74c3c';
+                resultEl.textContent = 'Something went wrong. Please call us at +91 7517514567.';
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Try Again';
+            }
+        } catch (error) {
+            resultEl.style.display = 'block';
+            resultEl.style.color = '#e74c3c';
+            resultEl.textContent = 'Network error. Please call us at +91 7517514567.';
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Try Again';
+        }
+    }
+
+    // Contact Section Form
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            handleWeb3Form(
+                this,
+                document.getElementById('contact-form-result'),
+                document.getElementById('contact-submit-btn'),
+                '✓ Thank you! Our team will contact you shortly.'
+            );
+        });
+    }
+
+    // Lead Modal Form (Floor Plans popup)
+    const leadForm = document.getElementById('lead-form');
+    if (leadForm) {
+        leadForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            handleWeb3Form(
+                this,
+                document.getElementById('lead-form-result'),
+                document.getElementById('lead-submit-btn'),
+                '✓ Details received! Floor plans will be shared with you shortly.'
+            );
+        });
+    }
+    </script>
 </body>
 </html>
