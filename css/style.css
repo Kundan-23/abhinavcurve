@@ -709,16 +709,15 @@ img { display: block; max-width: 100%; height: auto; }
     padding: 2rem 1.5rem;
     width: 95%;
     max-width: 500px;
+    z-index: 10;
+    transform: translateY(30px);
+    transition: transform 0.4s ease;
 }
 @media (min-width: 768px) {
     .lead-modal__content {
         padding: 4rem 3rem;
         width: 90%;
     }
-}
-    z-index: 10;
-    transform: translateY(30px);
-    transition: transform 0.4s ease;
 }
 
 .lead-modal.is-active .lead-modal__content {
