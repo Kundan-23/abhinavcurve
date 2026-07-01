@@ -874,18 +874,19 @@ img { display: block; max-width: 100%; height: auto; }
 
 /* Left: Sticky Image Display */
 .amenities-showcase__display {
-    position: relative;
+    position: sticky;
+    top: 70px; /* Stick below mobile header */
+    z-index: 10;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow-medium);
     border: 1px solid var(--border-gold);
     flex: 1;
-    height: 350px;
+    height: 280px; /* Reduced height on mobile to leave room for list */
 }
 
 @media (min-width: 992px) {
     .amenities-showcase__display {
-        position: sticky;
         top: 100px;
         height: 100%;
         flex: 1.2;
