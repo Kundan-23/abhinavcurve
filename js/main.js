@@ -394,11 +394,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Add shadow on scroll for premium depth effect
+        let isScrolled = false;
+        let ticking = false;
+        
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 60) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const shouldBeScrolled = window.scrollY > 60;
+                    if (shouldBeScrolled !== isScrolled) {
+                        isScrolled = shouldBeScrolled;
+                        if (isScrolled) {
+                            header.classList.add('scrolled');
+                        } else {
+                            header.classList.remove('scrolled');
+                        }
+                    }
+                    ticking = false;
+                });
+                ticking = true;
             }
         }, { passive: true });
     }

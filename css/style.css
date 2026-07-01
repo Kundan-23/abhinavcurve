@@ -2350,3 +2350,24 @@ img { display: block; max-width: 100%; height: auto; }
     height: 45px;
     object-fit: contain;
 }
+
+/* --- MOBILE PERFORMANCE OPTIMIZATIONS --- */
+@media (max-width: 767px) {
+    /* Backdrop filters and large box-shadows cause severe scroll lag on mobile */
+    .header {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background: rgba(250, 247, 242, 0.98) !important;
+    }
+    .about-new__card {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background: rgba(254, 252, 249, 1) !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important; 
+    }
+    .amenities-showcase__overlay {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background: rgba(14, 18, 16, 0.85) !important; 
+    }
+}
