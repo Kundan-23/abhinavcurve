@@ -7,6 +7,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // Register GSAP Plugins
     gsap.registerPlugin(ScrollTrigger);
 
+    // Mobile Menu Logic
+    const menuBtn = document.querySelector('.header__menu-btn');
+    const headerNav = document.querySelector('.header__nav');
+    if (menuBtn && headerNav) {
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('is-open');
+            headerNav.classList.toggle('is-open');
+            document.body.style.overflow = headerNav.classList.contains('is-open') ? 'hidden' : '';
+        });
+
+        const navLinks = headerNav.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuBtn.classList.remove('is-open');
+                headerNav.classList.remove('is-open');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+
     // 2. Prepare Hero Logo Letters for Stagger
     // (Already wrapped in spans in HTML: .hero__huge-logo span)
 
