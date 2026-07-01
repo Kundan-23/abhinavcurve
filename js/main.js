@@ -423,21 +423,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const amenityItems = document.querySelectorAll('.amenity-list-item');
     const showcaseImg = document.getElementById('amenity-showcase-img');
     
-    if (amenityItems.length && showcaseImg) {
+    if (amenityItems.length) {
         amenityItems.forEach(item => {
+            // Dynamically inject mobile image container
+            const imgSrc = item.getAttribute('data-image');
+            if (imgSrc) {
+                const mobileImg = document.createElement('div');
+                mobileImg.className = 'amenity-list-item__mobile-img';
+                mobileImg.innerHTML = `<img src="${imgSrc}" alt="Amenity Image">`;
+                item.appendChild(mobileImg);
+            }
+
             const handleInteract = () => {
                 if (item.classList.contains('active')) return;
                 
                 amenityItems.forEach(i => i.classList.remove('active'));
                 item.classList.add('active');
 
-                const newImgSrc = item.getAttribute('data-image');
-                if (newImgSrc && !showcaseImg.src.includes(newImgSrc)) {
-                    showcaseImg.classList.add('fade-out');
-                    setTimeout(() => {
-                        showcaseImg.src = newImgSrc;
-                        showcaseImg.classList.remove('fade-out');
-                    }, 250);
+                if (showcaseImg) {
+                    const newImgSrc = item.getAttribute('data-image');
+                    if (newImgSrc && !showcaseImg.src.includes(newImgSrc)) {
+                        showcaseImg.classList.add('fade-out');
+                        setTimeout(() => {
+                            showcaseImg.src = newImgSrc;
+                            showcaseImg.classList.remove('fade-out');
+                        }, 250);
+                    }
                 }
             };
 
