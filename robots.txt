@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://abhinavcurve.vercel.app/sitemap.xml
+Sitemap: https://www.thecurvevirarwest.com/sitemap.xml
 
 # Block common bot traps
 Disallow: /assets/videos/
