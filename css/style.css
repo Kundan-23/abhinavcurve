@@ -286,11 +286,9 @@ img { display: block; max-width: 100%; height: auto; }
     box-shadow: -4px 0 10px rgba(0,0,0,0.2);
 }
 
-.sticky-whatsapp {
+.sticky-whatsapp, .sticky-call {
     position: fixed;
     bottom: 20px;
-    right: 20px;
-    background: #25D366;
     color: #fff;
     padding: 10px 20px;
     border-radius: 50px;
@@ -303,19 +301,66 @@ img { display: block; max-width: 100%; height: auto; }
     transition: transform 0.3s ease, background 0.3s ease;
     text-decoration: none;
 }
+
+.sticky-whatsapp {
+    right: 20px;
+    background: #25D366;
+}
 .sticky-whatsapp:hover {
     transform: translateY(-5px);
     background: #128C7E;
     color: #fff;
 }
-.sticky-whatsapp__icon {
+
+.sticky-call {
+    left: 20px;
+    background: var(--gold);
+}
+.sticky-call:hover {
+    transform: translateY(-5px);
+    background: #b59567; /* darker gold */
+    color: #fff;
+}
+
+.sticky-whatsapp__icon, .sticky-call__icon {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.sticky-whatsapp__text {
+.sticky-whatsapp__text, .sticky-call__text {
     font-size: 1rem;
     font-weight: 500;
+}
+
+/* Mobile Sticky Bottom Bar */
+@media (max-width: 767px) {
+    .sticky-bottom-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        z-index: 9999;
+        box-shadow: 0 -4px 10px rgba(0,0,0,0.15);
+    }
+    .sticky-whatsapp, .sticky-call {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        width: 50%;
+        border-radius: 0;
+        padding: 14px 10px;
+        box-shadow: none;
+        justify-content: center;
+        gap: 8px;
+    }
+    .sticky-whatsapp:hover, .sticky-call:hover {
+        transform: none; /* No hover bounce on mobile bottom bar */
+    }
+    .sticky-whatsapp__text, .sticky-call__text {
+        font-size: 0.95rem;
+    }
 }
 
 /* ── HERO (SECTION 1) ── */
