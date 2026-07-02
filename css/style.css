@@ -336,16 +336,18 @@ img { display: block; max-width: 100%; height: auto; }
 @media (max-width: 767px) {
     .sticky-bottom-bar {
         position: fixed;
-        bottom: 15px;
-        left: 15px;
-        right: 15px;
+        bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+        left: 20px;
+        right: 20px;
         width: auto;
         display: flex;
         z-index: 9999;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        border-radius: 8px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        border-radius: 50px;
         overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.2);
     }
+    
     .sticky-whatsapp, .sticky-call {
         position: relative;
         bottom: auto;
@@ -353,19 +355,31 @@ img { display: block; max-width: 100%; height: auto; }
         right: auto;
         width: 50%;
         border-radius: 0;
-        padding: 12px 10px;
+        padding: 14px 10px;
         box-shadow: none;
         justify-content: center;
         gap: 8px;
+        transition: background 0.3s ease;
     }
+    
+    .sticky-call {
+        background: linear-gradient(135deg, var(--gold) 0%, #9e7f2f 100%);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .sticky-whatsapp {
+        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    }
+
     .sticky-whatsapp:hover, .sticky-call:hover {
         transform: none; /* No hover bounce on mobile bottom bar */
     }
+    
     .sticky-whatsapp__text, .sticky-call__text {
-        font-size: 0.95rem;
-    }
-    .sticky-call {
-        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.15);
     }
 }
 
