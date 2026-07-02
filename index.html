@@ -184,6 +184,9 @@
     <link rel="preload" as="image" href="assets/images/hero/hero-main11.jpg">
     <link rel="preload" as="image" href="assets/images/hero/hero-mobile.jpg" media="(max-width: 767px)">
 
+    <!-- intl-tel-input CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css?v=1.2">
 </head>
@@ -1036,22 +1039,42 @@
             <button class="lead-modal__close" id="close-lead-modal-btn">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
             </button>
-            <h2 class="lead-modal__title">UNLOCK PREMIUM ACCESS</h2>
-            <p class="lead-modal__desc">Please provide your details to view our exclusive 2 BHK, 3 BHK and Jodi floor plans.</p>
+            <h2 class="lead-modal__title">Fill Your Form Of Utmost Happiness</h2>
             <form class="lead-modal__form" id="lead-form">
                 <input type="hidden" name="access_key" value="a83acddf-a376-4cb2-855e-354ffa1acabb">
                 <input type="hidden" name="subject" value="Floor Plan Request — The Curve Virar West">
                 <input type="hidden" name="from_name" value="The Curve Website">
-                <div class="footer__input-group">
-                    <input type="text" name="name" class="footer__input" placeholder="FULL NAME" required>
+                
+                <div class="lead-modal__input-group">
+                    <input type="text" name="name" class="lead-modal__input" placeholder="Name" required>
                 </div>
-                <div class="footer__input-group">
-                    <input type="tel" name="phone" class="footer__input" placeholder="PHONE NUMBER" required>
+                
+                <div class="lead-modal__input-group">
+                    <input type="tel" id="lead-phone" name="phone" class="lead-modal__input" placeholder="Phone" required>
                 </div>
-                <div class="footer__input-group">
-                    <input type="email" name="email" class="footer__input" placeholder="EMAIL ADDRESS">
+                
+                <div class="lead-modal__input-group">
+                    <input type="email" name="email" class="lead-modal__input" placeholder="Email">
                 </div>
-                <button type="submit" class="btn btn--solid" id="lead-submit-btn" style="width: 100%;">ACCESS FLOOR PLANS</button>
+
+                <div class="lead-modal__input-group">
+                    <select name="configuration" class="lead-modal__select" required>
+                        <option value="" disabled selected>Select Configuration</option>
+                        <option value="2 BHK">2 BHK</option>
+                        <option value="3 BHK">3 BHK</option>
+                        <option value="Jodi">Jodi</option>
+                    </select>
+                </div>
+
+                <div class="lead-modal__consent">
+                    <input type="checkbox" id="lead-consent" name="consent" required checked>
+                    <label for="lead-consent">
+                        I authorize Abhinav Group & its representatives to contact me with updates and notifications via Email/SMS/WhatsApp/Call. This will override DND/NDNC settings.<br>
+                        <a href="#">Privacy Policy</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="lead-modal__submit-btn" id="lead-submit-btn">Submit</button>
                 <p class="form-result" id="lead-form-result" style="display:none; text-align:center; margin-top:1rem; font-size:0.9rem;"></p>
             </form>
         </div>
@@ -1219,6 +1242,8 @@
         });
     }
     </script>
+    <!-- intl-tel-input JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 </body>
 </html>
 

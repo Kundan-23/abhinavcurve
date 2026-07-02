@@ -339,6 +339,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const leadModalBackdrop = document.getElementById('lead-modal-backdrop');
     const leadForm = document.getElementById('lead-form');
     const layoutsWrapper = document.getElementById('layouts-wrapper');
+    const leadPhoneInput = document.getElementById('lead-phone');
+
+    // Initialize intlTelInput
+    if (leadPhoneInput && window.intlTelInput) {
+        window.intlTelInput(leadPhoneInput, {
+            initialCountry: "in",
+            separateDialCode: true,
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+    }
 
     function closeLeadModal() {
         if(leadModal) leadModal.classList.remove('is-active');
