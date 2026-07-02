@@ -361,7 +361,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function closeLeadModal() {
-        if(leadModal) leadModal.classList.remove('is-active');
+        if(leadModal) {
+            leadModal.classList.remove('is-active');
+            leadModal.style.cssText = '';
+            const content = leadModal.querySelector('.inquiry-dialog__content');
+            if (content) content.style.cssText = '';
+        }
     }
 
     const openLeadModalBtns = document.querySelectorAll('.open-inquiry-dialog-btn, #open-inquiry-dialog-btn');

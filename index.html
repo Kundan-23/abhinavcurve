@@ -1261,10 +1261,16 @@
                 submitBtn.textContent = '✓ Sent!';
                 
                 // If it's the modal form, save in local storage to stop recurring popups
-                if (form.id === 'lead-form') {
+                if (form.id === 'inquiry-form' || form.id === 'lead-form') {
                     localStorage.setItem('curve_lead_submitted', 'true');
                     setTimeout(() => {
-                        document.getElementById('inquiry-dialog').classList.remove('is-active');
+                        const modal = document.getElementById('inquiry-dialog');
+                        if (modal) {
+                            modal.classList.remove('is-active');
+                            modal.style.cssText = '';
+                            const content = modal.querySelector('.inquiry-dialog__content');
+                            if (content) content.style.cssText = '';
+                        }
                     }, 2000); // auto close after 2 seconds
                 }
             } else {
