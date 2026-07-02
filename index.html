@@ -1093,9 +1093,9 @@
     
     <!-- Inquiry Form Modal -->
     <div class="inquiry-dialog" id="inquiry-dialog">
-        <div class="inquiry-dialog__backdrop" id="inquiry-dialog-backdrop" onclick="forceCloseModal()"></div>
+        <div class="inquiry-dialog__backdrop" id="inquiry-dialog-backdrop" onclick="forceCloseModal(event)"></div>
         <div class="inquiry-dialog__content">
-            <button class="inquiry-dialog__close" id="close-inquiry-dialog-btn" onclick="forceCloseModal()">
+            <button class="inquiry-dialog__close" id="close-inquiry-dialog-btn" onclick="forceCloseModal(event)">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
             </button>
             <h2 class="inquiry-dialog__title">Fill Your Form Of Utmost Happiness</h2>
@@ -1238,15 +1238,15 @@
                 alert("Error: Modal not found in HTML");
             }
         }
-        
-        function forceCloseModal() {
+        function forceCloseModal(e) {
+            if (e) e.preventDefault();
             var modal = document.getElementById('inquiry-dialog');
             if (modal) {
                 modal.classList.remove('is-active');
-                modal.style.cssText = '';
+                modal.setAttribute('style', 'display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; z-index: -1 !important;');
                 var content = modal.querySelector('.inquiry-dialog__content');
                 if (content) {
-                    content.style.cssText = '';
+                    content.setAttribute('style', 'display: none !important; opacity: 0 !important; visibility: hidden !important;');
                 }
             }
         }
@@ -1287,9 +1287,11 @@
                         const modal = document.getElementById('inquiry-dialog');
                         if (modal) {
                             modal.classList.remove('is-active');
-                            modal.style.cssText = '';
+                            modal.setAttribute('style', 'display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; z-index: -1 !important;');
                             const content = modal.querySelector('.inquiry-dialog__content');
-                            if (content) content.style.cssText = '';
+                            if (content) {
+                                content.setAttribute('style', 'display: none !important; opacity: 0 !important; visibility: hidden !important;');
+                            }
                         }
                     }, 2000); // auto close after 2 seconds
                 }
