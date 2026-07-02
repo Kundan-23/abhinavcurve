@@ -237,7 +237,7 @@
             </nav>
 
             <div class="header__actions">
-                <a href="#contact" class="btn btn--solid is-hidden-mobile open-lead-modal-btn">Enquire Now</a>
+                <a href="#contact" class="btn btn--solid is-hidden-mobile open-lead-modal-btn" onclick="document.getElementById('lead-modal').classList.add('is-active'); return false;">Enquire Now</a>
                 <button class="header__menu-btn" aria-label="Menu">
                     <span class="menu-btn__line"></span>
                     <span class="menu-btn__line"></span>
@@ -637,21 +637,21 @@
                         <h3 class="config-vcard__title">2 BHK</h3>
                         <p class="config-vcard__desc">Elegant Living, Perfectly Sized</p>
                         <div class="config-vcard__line"></div>
-                        <a href="#contact" class="btn btn--primary w-full open-lead-modal-btn" onclick="document.getElementById('lead-modal').classList.add('is-active'); return false;">Enquire Now</a>
+                        <a href="#contact" class="btn btn--primary w-full open-lead-modal-btn" onclick="forceOpenModal(event)">Enquire Now</a>
                     </div>
                     <!-- 3 BHK -->
                     <div class="config-vcard animate-fade-up" style="transition-delay: 100ms;">
                         <h3 class="config-vcard__title">3 BHK</h3>
                         <p class="config-vcard__desc">Spacious Family Homes, Designed to Impress</p>
                         <div class="config-vcard__line"></div>
-                        <a href="#contact" class="btn btn--primary w-full open-lead-modal-btn" onclick="document.getElementById('lead-modal').classList.add('is-active'); return false;">Enquire Now</a>
+                        <a href="#contact" class="btn btn--primary w-full open-lead-modal-btn" onclick="forceOpenModal(event)">Enquire Now</a>
                     </div>
                     <!-- Jodi Flats -->
                     <div class="config-vcard animate-fade-up" style="transition-delay: 200ms;">
                         <h3 class="config-vcard__title">JODI FLATS</h3>
                         <p class="config-vcard__desc">Double the Space, Double the Grandeur</p>
                         <div class="config-vcard__line"></div>
-                        <a href="#contact" class="btn btn--primary w-full open-lead-modal-btn" onclick="document.getElementById('lead-modal').classList.add('is-active'); return false;">Enquire Now</a>
+                        <a href="#contact" class="btn btn--primary w-full open-lead-modal-btn" onclick="forceOpenModal(event)">Enquire Now</a>
                     </div>
                 </div>
             </div>
@@ -1201,6 +1201,17 @@
     <!-- ============================================================
          SCRIPTS
          ============================================================ -->
+    <script>
+        function forceOpenModal(e) {
+            e.preventDefault();
+            var modal = document.getElementById('lead-modal');
+            if (modal) {
+                modal.classList.add('is-active');
+                modal.style.opacity = '1';
+                modal.style.pointerEvents = 'auto';
+            }
+        }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="js/animations.js"></script>
