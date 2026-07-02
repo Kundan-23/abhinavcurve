@@ -333,10 +333,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // ============================================================
     // 9. Lead Modal & Floor Plan Unlock
     // ============================================================
-    const openLeadModalBtn = document.getElementById('open-lead-modal-btn');
-    const leadModal = document.getElementById('lead-modal');
-    const closeLeadModalBtn = document.getElementById('close-lead-modal-btn');
-    const leadModalBackdrop = document.getElementById('lead-modal-backdrop');
+    const openLeadModalBtn = document.getElementById('open-inquiry-dialog-btn');
+    const leadModal = document.getElementById('inquiry-dialog');
+    const closeLeadModalBtn = document.getElementById('close-inquiry-dialog-btn');
+    const leadModalBackdrop = document.getElementById('inquiry-dialog-backdrop');
     const leadForm = document.getElementById('lead-form');
     const layoutsWrapper = document.getElementById('layouts-wrapper');
     const leadPhoneInput = document.getElementById('lead-phone');
@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(leadModal) leadModal.classList.remove('is-active');
     }
 
-    const openLeadModalBtns = document.querySelectorAll('.open-lead-modal-btn, #open-lead-modal-btn');
+    const openLeadModalBtns = document.querySelectorAll('.open-inquiry-dialog-btn, #open-inquiry-dialog-btn');
     if (openLeadModalBtns.length > 0 && leadModal) {
         openLeadModalBtns.forEach(btn => {
             btn.addEventListener('click', (e) => {
