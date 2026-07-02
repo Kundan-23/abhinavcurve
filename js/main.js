@@ -340,10 +340,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const leadForm = document.getElementById('lead-form');
     const layoutsWrapper = document.getElementById('layouts-wrapper');
     const leadPhoneInput = document.getElementById('lead-phone');
+    const contactPhoneInput = document.getElementById('contact-phone');
 
-    // Initialize intlTelInput
+    // Initialize intlTelInput for lead form
     if (leadPhoneInput && window.intlTelInput) {
         window.intlTelInput(leadPhoneInput, {
+            initialCountry: "in",
+            separateDialCode: true,
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+    }
+
+    // Initialize intlTelInput for contact form
+    if (contactPhoneInput && window.intlTelInput) {
+        window.intlTelInput(contactPhoneInput, {
             initialCountry: "in",
             separateDialCode: true,
             utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",

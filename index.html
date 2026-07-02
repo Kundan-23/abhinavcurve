@@ -944,14 +944,41 @@
                 <div class="contact-new__card animate-fade-up">
                     <h2 class="contact-new__title">ENQUIRE NOW</h2>
                     <p class="contact-new__desc">Register your interest to get priority access, exclusive offers, and detailed floor plans.</p>
-                    <form class="contact-new__form" id="contact-form">
+                    <form class="contact-new__form lead-modal__form" id="contact-form">
                         <input type="hidden" name="access_key" value="a83acddf-a376-4cb2-855e-354ffa1acabb">
                         <input type="hidden" name="subject" value="New Enquiry — The Curve Virar West">
                         <input type="hidden" name="from_name" value="The Curve Website">
-                        <input type="text" name="name" placeholder="Full Name" required class="contact-new__input">
-                        <input type="tel" name="phone" placeholder="Phone Number" required class="contact-new__input">
-                        <input type="email" name="email" placeholder="Email Address" class="contact-new__input">
-                        <button type="submit" class="btn btn--primary w-full" id="contact-submit-btn">SUBMIT</button>
+                        
+                        <div class="lead-modal__input-group">
+                            <input type="text" name="name" class="lead-modal__input" placeholder="Name" required>
+                        </div>
+                        
+                        <div class="lead-modal__input-group">
+                            <input type="tel" id="contact-phone" name="phone" class="lead-modal__input" placeholder="Phone" required>
+                        </div>
+                        
+                        <div class="lead-modal__input-group">
+                            <input type="email" name="email" class="lead-modal__input" placeholder="Email">
+                        </div>
+
+                        <div class="lead-modal__input-group">
+                            <select name="configuration" class="lead-modal__select" required>
+                                <option value="" disabled selected>Select Configuration</option>
+                                <option value="2 BHK">2 BHK</option>
+                                <option value="3 BHK">3 BHK</option>
+                                <option value="Jodi">Jodi</option>
+                            </select>
+                        </div>
+
+                        <div class="lead-modal__consent">
+                            <input type="checkbox" id="contact-consent" name="consent" required checked>
+                            <label for="contact-consent">
+                                I authorize Abhinav Group & its representatives to contact me with updates and notifications via Email/SMS/WhatsApp/Call. This will override DND/NDNC settings.<br>
+                                <a href="#">Privacy Policy</a>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="lead-modal__submit-btn" id="contact-submit-btn">Submit</button>
                         <p class="form-result" id="contact-form-result" style="display:none; text-align:center; margin-top:1rem; font-size:0.9rem;"></p>
                     </form>
                 </div>
