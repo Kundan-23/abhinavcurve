@@ -332,54 +332,57 @@ img { display: block; max-width: 100%; height: auto; }
     font-weight: 500;
 }
 
-/* Mobile Sticky Bottom Bar */
+/* Mobile Floating Buttons (Separated) */
 @media (max-width: 767px) {
     .sticky-bottom-bar {
-        position: fixed;
-        bottom: calc(20px + env(safe-area-inset-bottom, 0px));
-        left: 20px;
-        right: 20px;
-        width: auto;
-        display: flex;
-        z-index: 9999;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-        border-radius: 50px;
-        overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        position: static;
+        display: block;
+        box-shadow: none;
+        background: transparent;
+        border: none;
+        width: 100%;
+        border-radius: 0;
     }
     
     .sticky-whatsapp, .sticky-call {
-        position: relative;
-        bottom: auto;
-        left: auto;
-        right: auto;
-        width: 50%;
-        border-radius: 0;
-        padding: 14px 10px;
-        box-shadow: none;
+        position: fixed;
+        bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        padding: 0;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
         justify-content: center;
-        gap: 8px;
-        transition: background 0.3s ease;
+        align-items: center;
+        z-index: 9999;
+        transition: transform 0.3s ease;
     }
     
     .sticky-call {
+        left: 20px;
+        right: auto;
         background: linear-gradient(135deg, var(--gold) 0%, #9e7f2f 100%);
-        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border: none;
     }
     
     .sticky-whatsapp {
+        right: 20px;
+        left: auto;
         background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        border: none;
     }
 
-    .sticky-whatsapp:hover, .sticky-call:hover {
-        transform: none; /* No hover bounce on mobile bottom bar */
+    .sticky-whatsapp__text, .sticky-call__text {
+        display: none; /* Hide text on mobile for clean circular buttons */
+    }
+
+    .sticky-whatsapp__icon svg, .sticky-call__icon svg {
+        width: 28px;
+        height: 28px;
     }
     
-    .sticky-whatsapp__text, .sticky-call__text {
-        font-size: 1rem;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    .sticky-whatsapp:active, .sticky-call:active {
+        transform: scale(0.95);
     }
 }
 
