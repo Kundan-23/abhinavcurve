@@ -364,9 +364,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if(leadModal) leadModal.classList.remove('is-active');
     }
 
-    if (openLeadModalBtn && leadModal) {
-        openLeadModalBtn.addEventListener('click', () => {
-            leadModal.classList.add('is-active');
+    const openLeadModalBtns = document.querySelectorAll('.open-lead-modal-btn, #open-lead-modal-btn');
+    if (openLeadModalBtns.length > 0 && leadModal) {
+        openLeadModalBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                leadModal.classList.add('is-active');
+            });
         });
     }
 
