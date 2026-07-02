@@ -336,12 +336,15 @@ img { display: block; max-width: 100%; height: auto; }
 @media (max-width: 767px) {
     .sticky-bottom-bar {
         position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+        width: auto;
         display: flex;
         z-index: 9999;
-        box-shadow: 0 -4px 10px rgba(0,0,0,0.15);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        border-radius: 8px;
+        overflow: hidden;
     }
     .sticky-whatsapp, .sticky-call {
         position: relative;
@@ -350,7 +353,7 @@ img { display: block; max-width: 100%; height: auto; }
         right: auto;
         width: 50%;
         border-radius: 0;
-        padding: 14px 10px;
+        padding: 12px 10px;
         box-shadow: none;
         justify-content: center;
         gap: 8px;
@@ -360,6 +363,9 @@ img { display: block; max-width: 100%; height: auto; }
     }
     .sticky-whatsapp__text, .sticky-call__text {
         font-size: 0.95rem;
+    }
+    .sticky-call {
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
     }
 }
 
