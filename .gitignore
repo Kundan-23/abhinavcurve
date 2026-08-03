@@ -1,1 +1,12 @@
-compress_all.py
+compress_all.py
+compress_video.py
+convert_webp.py
+patch_html.py
+verify.py
+
+# Raw source video — too large for git
+assets/videos/*.MOV
+assets/videos/*.mov
+
+# Local backup of originals — never deploy to Vercel
+assets/_originals_backup/

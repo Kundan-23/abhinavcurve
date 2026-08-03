@@ -181,14 +181,14 @@
          ============================================================ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="image" href="assets/images/hero/hero-desktopnew.png">
-    <link rel="preload" as="image" href="assets/images/hero/hero-mobile-final.png" media="(max-width: 767px)">
+    <link rel="preload" as="image" href="assets/images/hero/hero-desktopnew.webp" type="image/webp">
+    <link rel="preload" as="image" href="assets/images/hero/hero-mobile-final.webp" type="image/webp" media="(max-width: 767px)">
 
     <!-- intl-tel-input CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css?v=4">
+    <link rel="stylesheet" href="css/style.css?v=5">
 </head>
 <body class="loading">
 
@@ -282,8 +282,10 @@
             <!-- Background Layer Only -->
             <div class="hero__bg">
                 <picture class="hero__picture">
+                    <source media="(max-width: 767px)" type="image/webp" srcset="assets/images/hero/hero-mobile-final.webp">
                     <source media="(max-width: 767px)" srcset="assets/images/hero/hero-mobile-final.png">
-                    <img src="assets/images/hero/hero-desktopnew.png" alt="The Curve luxury residential tower in Virar West, Mumbai — exterior aerial view" class="hero__img">
+                    <source type="image/webp" srcset="assets/images/hero/hero-desktopnew.webp">
+                    <img src="assets/images/hero/hero-desktopnew.png" alt="The Curve luxury residential tower in Virar West, Mumbai — exterior aerial view" class="hero__img" loading="eager" fetchpriority="high">
                 </picture>
             </div>
         </section>
@@ -293,14 +295,17 @@
              ============================================================ -->
         <section class="about-new" id="about">
             <div class="about-new__bg">
-                <img src="assets/images/hero/hero-main11.jpg" alt="The Curve residential project in Virar West by Abhinav Group" class="about-new__img">
+                <picture>
+                    <source type="image/webp" srcset="assets/images/hero/hero-main11.webp">
+                    <img src="assets/images/hero/hero-main11.jpg" alt="The Curve residential project in Virar West by Abhinav Group" class="about-new__img" loading="lazy">
+                </picture>
                 <div class="about-new__overlay"></div>
             </div>
             <div class="container about-new__container animate-fade-up">
                 <div class="about-new__card">
                     <h2 class="about-new__title">ABOUT THE CURVE</h2>
                     <div class="section-divider">
-                        <img src="assets/images/logos/The%20Curve%20Final%20Logo%20.png" alt="The Curve Logo" style="height: 35px; width: auto; object-fit: contain; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
+                        <img src="assets/images/logos/The%20Curve%20Final%20Logo%20.png" alt="The Curve Logo" loading="lazy" style="height: 35px; width: auto; object-fit: contain; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
                     </div>
                     <p class="about-new__text">
                         Abhinav Group presents The Curve — a landmark residential address in the heart of Virar West, Mumbai. Offering premium 2 BHK, 3 BHK, and spacious Jodi apartments, The Curve redefines luxury living with over 40 world-class amenities, Vastu-compliant designs, and breathtaking open spaces. Located just 7 minutes from Virar Railway Station and MahaRERA registered (Reg. No. PR1240002600667), The Curve is crafted for those who seek elegance, comfort, and an exceptional quality of life.
@@ -316,7 +321,7 @@
             <div class="container text-center">
                 <h2 class="amenities-new__title animate-fade-up">40+ AMENITIES</h2>
                 <div class="section-divider">
-                        <img src="assets/images/logos/The%20Curve%20Final%20Logo%20.png" alt="The Curve Logo" style="height: 35px; width: auto; object-fit: contain; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
+                        <img src="assets/images/logos/The%20Curve%20Final%20Logo%20.png" alt="The Curve Logo" loading="lazy" style="height: 35px; width: auto; object-fit: contain; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
                     </div>
                 <p class="amenities-new__desc">
                     From Leisure To Convenience, Every Amenity Is Thoughtfully Created To Enrich Your Everyday Living.
@@ -325,7 +330,10 @@
                 <div class="amenities-showcase" data-reveal-group>
                     <!-- Left: Sticky Showcase Image -->
                     <div class="amenities-showcase__display animate-fade-in">
-                        <img src="assets/images/amenities/amenity-aquahub.jpg" id="amenity-showcase-img" alt="The Aqua Hub">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-aquahub.webp">
+                            <img src="assets/images/amenities/amenity-aquahub.jpg" id="amenity-showcase-img" alt="The Aqua Hub" loading="lazy">
+                        </picture>
                         <div class="amenities-showcase__overlay"></div>
                     </div>
                     
@@ -428,7 +436,7 @@
             <div class="gallery-new__header text-center animate-fade-up">
                 <h2 class="gallery-new__title">FEATURED AMENITIES</h2>
                 <div class="section-divider">
-                        <img src="assets/images/logos/The%20Curve%20Final%20Logo%20.png" alt="The Curve Logo" style="height: 35px; width: auto; object-fit: contain; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
+                        <img src="assets/images/logos/The%20Curve%20Final%20Logo%20.png" alt="The Curve Logo" loading="lazy" style="height: 35px; width: auto; object-fit: contain; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
                     </div>
             </div>
             
@@ -437,86 +445,122 @@
                 <div class="gallery-new__track">
                     <!-- Original Set -->
                     <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-aquahub.jpg" alt="Aqua Hub" class="gallery-new__img">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-aquahub.webp">
+                            <img src="assets/images/amenities/amenity-aquahub.jpg" alt="Aqua Hub" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">Aqua Hub</h3>
                             <p class="gallery-new__item-desc">A pristine swimming pool to dive into relaxation and luxury.</p>
                         </div>
                     </div>
                     <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-fitness-zone.jpg" alt="Fitness Zone" class="gallery-new__img">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-fitness-zone.webp">
+                            <img src="assets/images/amenities/amenity-fitness-zone.jpg" alt="Fitness Zone" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">Fitness Zone</h3>
                             <p class="gallery-new__item-desc">State-of-the-art equipment to elevate your daily workouts.</p>
                         </div>
                     </div>
                     <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-grand-ballroom.jpg" alt="Grand Ballroom" class="gallery-new__img">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-grand-ballroom.webp">
+                            <img src="assets/images/amenities/amenity-grand-ballroom.jpg" alt="Grand Ballroom" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">Grand Ballroom</h3>
                             <p class="gallery-new__item-desc">An elegant space designed for life's most beautiful celebrations.</p>
                         </div>
                     </div>
                     <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-adventure-zone.jpg" alt="Adventure Zone" class="gallery-new__img">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-adventure-zone.webp">
+                            <img src="assets/images/amenities/amenity-adventure-zone.jpg" alt="Adventure Zone" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">Adventure Zone</h3>
                             <p class="gallery-new__item-desc">Thrilling spaces tailored for energetic and adventurous play.</p>
                         </div>
                     </div>
                     <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-chill-deck.jpg" alt="Chill Deck" class="gallery-new__img">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-chill-deck.webp">
+                            <img src="assets/images/amenities/amenity-chill-deck.jpg" alt="Chill Deck" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">Chill Deck</h3>
                             <p class="gallery-new__item-desc">Unwind and socialize in a serene, perfectly curated environment.</p>
                         </div>
                     </div>
                     <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-wellness-studio.jpg" alt="Wellness Studio" class="gallery-new__img">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-wellness-studio.webp">
+                            <img src="assets/images/amenities/amenity-wellness-studio.jpg" alt="Wellness Studio" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">Wellness Studio</h3>
                             <p class="gallery-new__item-desc">Find your zen with dedicated spaces for yoga and meditation.</p>
                         </div>
                     </div>
                     
-                    <!-- Duplicate Set for Infinite Scroll -->
-                    <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-aquahub.jpg" alt="Aqua Hub" class="gallery-new__img">
+                    <!-- Duplicate Set for Infinite Scroll (aria-hidden, cached URLs) -->
+                    <div class="gallery-new__item" aria-hidden="true">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-aquahub.webp">
+                            <img src="assets/images/amenities/amenity-aquahub.jpg" alt="Aqua Hub" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">Aqua Hub</h3>
                             <p class="gallery-new__item-desc">A pristine swimming pool to dive into relaxation and luxury.</p>
                         </div>
                     </div>
                     <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-fitness-zone.jpg" alt="Fitness Zone" class="gallery-new__img">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-fitness-zone.webp">
+                            <img src="assets/images/amenities/amenity-fitness-zone.jpg" alt="Fitness Zone" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">Fitness Zone</h3>
                             <p class="gallery-new__item-desc">State-of-the-art equipment to elevate your daily workouts.</p>
                         </div>
                     </div>
                     <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-grand-ballroom.jpg" alt="Grand Ballroom" class="gallery-new__img">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-grand-ballroom.webp">
+                            <img src="assets/images/amenities/amenity-grand-ballroom.jpg" alt="Grand Ballroom" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">Grand Ballroom</h3>
                             <p class="gallery-new__item-desc">An elegant space designed for life's most beautiful celebrations.</p>
                         </div>
                     </div>
                     <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-adventure-zone.jpg" alt="Adventure Zone" class="gallery-new__img">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-adventure-zone.webp">
+                            <img src="assets/images/amenities/amenity-adventure-zone.jpg" alt="Adventure Zone" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">Adventure Zone</h3>
                             <p class="gallery-new__item-desc">Thrilling spaces tailored for energetic and adventurous play.</p>
                         </div>
                     </div>
                     <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-chill-deck.jpg" alt="Chill Deck" class="gallery-new__img">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-chill-deck.webp">
+                            <img src="assets/images/amenities/amenity-chill-deck.jpg" alt="Chill Deck" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">Chill Deck</h3>
                             <p class="gallery-new__item-desc">Unwind and socialize in a serene, perfectly curated environment.</p>
                         </div>
                     </div>
                     <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-wellness-studio.jpg" alt="Wellness Studio" class="gallery-new__img">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-wellness-studio.webp">
+                            <img src="assets/images/amenities/amenity-wellness-studio.jpg" alt="Wellness Studio" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">Wellness Studio</h3>
                             <p class="gallery-new__item-desc">Find your zen with dedicated spaces for yoga and meditation.</p>
@@ -530,86 +574,122 @@
                 <div class="gallery-new__track gallery-new__track--reverse">
                     <!-- Original Set -->
                     <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-game-lounge.jpg" alt="Game Lounge" class="gallery-new__img">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-game-lounge.webp">
+                            <img src="assets/images/amenities/amenity-game-lounge.jpg" alt="Game Lounge" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">Game Lounge</h3>
                             <p class="gallery-new__item-desc">Premium indoor recreation with billiards, table tennis, and more.</p>
                         </div>
                     </div>
                     <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-badminton-court.jpg" alt="Badminton Court" class="gallery-new__img">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-badminton-court.webp">
+                            <img src="assets/images/amenities/amenity-badminton-court.jpg" alt="Badminton Court" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">Badminton Court</h3>
                             <p class="gallery-new__item-desc">A professional-grade indoor court for active sports enthusiasts.</p>
                         </div>
                     </div>
                     <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-little-nest.jpg" alt="Little Nest" class="gallery-new__img">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-little-nest.webp">
+                            <img src="assets/images/amenities/amenity-little-nest.jpg" alt="Little Nest" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">Little Nest</h3>
                             <p class="gallery-new__item-desc">A secure, engaging space where children can explore and grow.</p>
                         </div>
                     </div>
                     <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-open-air-theatre.jpg" alt="Open Air Theatre" class="gallery-new__img">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-open-air-theatre.webp">
+                            <img src="assets/images/amenities/amenity-open-air-theatre.jpg" alt="Open Air Theatre" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">Open Air Theatre</h3>
                             <p class="gallery-new__item-desc">Experience cinematic magic under the expansive night sky.</p>
                         </div>
                     </div>
                     <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-theclub.jpg" alt="The Club" class="gallery-new__img">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-theclub.webp">
+                            <img src="assets/images/amenities/amenity-theclub.jpg" alt="The Club" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">The Club</h3>
                             <p class="gallery-new__item-desc">An exclusive clubhouse offering world-class leisure and networking.</p>
                         </div>
                     </div>
                     <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-walking-track.jpg" alt="Walking Track" class="gallery-new__img">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-walking-track.webp">
+                            <img src="assets/images/amenities/amenity-walking-track.jpg" alt="Walking Track" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">Walking Track</h3>
                             <p class="gallery-new__item-desc">A scenic trail amidst lush greens for your daily stroll.</p>
                         </div>
                     </div>
                     
-                    <!-- Duplicate Set for Infinite Scroll -->
-                    <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-game-lounge.jpg" alt="Game Lounge" class="gallery-new__img">
+                    <!-- Duplicate Set for Infinite Scroll (aria-hidden, cached URLs) -->
+                    <div class="gallery-new__item" aria-hidden="true">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-game-lounge.webp">
+                            <img src="assets/images/amenities/amenity-game-lounge.jpg" alt="Game Lounge" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">Game Lounge</h3>
                             <p class="gallery-new__item-desc">Premium indoor recreation with billiards, table tennis, and more.</p>
                         </div>
                     </div>
                     <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-badminton-court.jpg" alt="Badminton Court" class="gallery-new__img">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-badminton-court.webp">
+                            <img src="assets/images/amenities/amenity-badminton-court.jpg" alt="Badminton Court" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">Badminton Court</h3>
                             <p class="gallery-new__item-desc">A professional-grade indoor court for active sports enthusiasts.</p>
                         </div>
                     </div>
                     <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-little-nest.jpg" alt="Little Nest" class="gallery-new__img">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-little-nest.webp">
+                            <img src="assets/images/amenities/amenity-little-nest.jpg" alt="Little Nest" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">Little Nest</h3>
                             <p class="gallery-new__item-desc">A secure, engaging space where children can explore and grow.</p>
                         </div>
                     </div>
                     <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-open-air-theatre.jpg" alt="Open Air Theatre" class="gallery-new__img">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-open-air-theatre.webp">
+                            <img src="assets/images/amenities/amenity-open-air-theatre.jpg" alt="Open Air Theatre" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">Open Air Theatre</h3>
                             <p class="gallery-new__item-desc">Experience cinematic magic under the expansive night sky.</p>
                         </div>
                     </div>
                     <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-theclub.jpg" alt="The Club" class="gallery-new__img">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-theclub.webp">
+                            <img src="assets/images/amenities/amenity-theclub.jpg" alt="The Club" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">The Club</h3>
                             <p class="gallery-new__item-desc">An exclusive clubhouse offering world-class leisure and networking.</p>
                         </div>
                     </div>
                     <div class="gallery-new__item">
-                        <img src="assets/images/amenities/amenity-walking-track.jpg" alt="Walking Track" class="gallery-new__img">
+                        <picture>
+                            <source type="image/webp" srcset="assets/images/amenities/amenity-walking-track.webp">
+                            <img src="assets/images/amenities/amenity-walking-track.jpg" alt="Walking Track" class="gallery-new__img" loading="lazy">
+                        </picture>
                         <div class="gallery-new__content">
                             <h3 class="gallery-new__item-title">Walking Track</h3>
                             <p class="gallery-new__item-desc">A scenic trail amidst lush greens for your daily stroll.</p>
@@ -627,7 +707,7 @@
                 <div class="configuration-new__header animate-fade-up">
                     <h2 class="configuration-new__title text-center" style="font-family: var(--font-heading); font-size: clamp(2.5rem, 4.5vw, 3.8rem); font-weight: 500; color: var(--text-main); letter-spacing: 1px; margin-bottom: 0; text-align: center;">CONFIGURATION</h2>
                     <div class="section-divider">
-                        <img src="assets/images/logos/The%20Curve%20Final%20Logo%20.png" alt="The Curve Logo" style="height: 35px; width: auto; object-fit: contain; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
+                        <img src="assets/images/logos/The%20Curve%20Final%20Logo%20.png" alt="The Curve Logo" loading="lazy" style="height: 35px; width: auto; object-fit: contain; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
                     </div>
                 </div>
                 
@@ -664,12 +744,12 @@
             <div class="container text-center">
                 <h2 class="explore-new__title animate-fade-up">EXPLORE THE PROJECT</h2>
                 <div class="section-divider">
-                    <img src="assets/images/logos/The%20Curve%20Final%20Logo%20.png" alt="Decorative Icon" style="height: 45px; width: auto; object-fit: contain;">
+                    <img src="assets/images/logos/The%20Curve%20Final%20Logo%20.png" alt="Decorative Icon" loading="lazy" style="height: 45px; width: auto; object-fit: contain;">
                 </div>
                 
                 <div class="explore-new__video animate-scale-in">
-                    <video controls preload="metadata" playsinline style="width: 100%; display: block; border-radius: 12px;">
-                        <source src="assets/videos/project-walkthrough.mp4?v=2" type="video/mp4">
+                    <video controls preload="none" playsinline poster="assets/videos/walkthrough-poster.jpg" style="width: 100%; display: block; border-radius: 12px;">
+                        <source src="assets/videos/project-walkthrough.mp4?v=3" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -684,7 +764,7 @@
                 <div class="proximity-new__header text-center animate-fade-up">
                     <h2 class="proximity-new__title">PROXIMITY</h2>
                     <div class="section-divider">
-                        <img src="assets/images/logos/The%20Curve%20Final%20Logo%20.png" alt="The Curve Logo" style="height: 35px; width: auto; object-fit: contain; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
+                        <img src="assets/images/logos/The%20Curve%20Final%20Logo%20.png" alt="The Curve Logo" loading="lazy" style="height: 35px; width: auto; object-fit: contain; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
                     </div>
                 </div>
                 
@@ -753,7 +833,7 @@
                     <div class="connectivity-split__content">
                         <h2 class="connectivity-new__title">CONNECTIVITY</h2>
                         <div class="section-divider">
-                        <img src="assets/images/logos/The%20Curve%20Final%20Logo%20.png" alt="The Curve Logo" style="height: 35px; width: auto; object-fit: contain; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
+                        <img src="assets/images/logos/The%20Curve%20Final%20Logo%20.png" alt="The Curve Logo" loading="lazy" style="height: 35px; width: auto; object-fit: contain; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
                     </div>
                         <p class="connectivity-new__desc">The Curve enjoys a prime address on Viva City Road, Virar West — just 7 minutes from Virar Railway Station on the Mumbai Suburban Network. With seamless connectivity to the Western Express Highway, upcoming metro extensions, and the future Mumbai-Ahmedabad Bullet Train corridor, getting to Mumbai and beyond is effortless.</p>
                         <a href="#contact" class="btn btn--outline mt-4">Get Directions</a>
@@ -769,7 +849,7 @@
             <div class="container text-center">
                 <h2 class="floorplans-new__title animate-fade-up">FLOOR PLANS</h2>
                 <div class="section-divider">
-                    <img src="assets/images/logos/The%20Curve%20Final%20Logo%20.png" alt="Decorative Icon" style="height: 45px; width: auto; object-fit: contain;">
+                    <img src="assets/images/logos/The%20Curve%20Final%20Logo%20.png" alt="Decorative Icon" loading="lazy" style="height: 45px; width: auto; object-fit: contain;">
                 </div>
                 <div class="floorplans-new__preview animate-scale-in">
                     <img src="assets/images/floorplans/floorplan1.jpg" alt="Floor Plan" class="floorplans-new__blur-img">
@@ -788,7 +868,7 @@
                 <div class="why-invest__header text-center animate-fade-up">
                     <h2 class="why-invest__title" style="font-family: var(--font-heading); font-size: clamp(2.5rem, 4.5vw, 3.8rem); font-weight: 500; color: var(--text-main); letter-spacing: 1px; margin-bottom: 0; text-align: center;">WHY INVEST IN VIRAR WEST?</h2>
                     <div class="section-divider">
-                        <img src="assets/images/logos/The%20Curve%20Final%20Logo%20.png" alt="The Curve Logo" style="height: 35px; width: auto; object-fit: contain; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
+                        <img src="assets/images/logos/The%20Curve%20Final%20Logo%20.png" alt="The Curve Logo" loading="lazy" style="height: 35px; width: auto; object-fit: contain; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.1));">
                     </div>
                 </div>
                 
@@ -1175,37 +1255,55 @@
             <div class="gallery-modal__list">
                 <!-- Gallery Images -->
                 <div class="gallery-modal__item">
-                    <img src="./assets/images/gallery/gallery-01.jpg" alt="Gallery 1">
+                    <picture>
+                        <source type="image/webp" srcset="assets/images/gallery/gallery-01.webp">
+                        <img src="./assets/images/gallery/gallery-01.jpg" alt="Gallery 1" loading="lazy">
+                    </picture>
                     <div class="gallery-modal__item-overlay">
                         <div class="gallery-modal__plus">+</div>
                     </div>
                 </div>
                 <div class="gallery-modal__item">
-                    <img src="./assets/images/gallery/gallery-02.jpg" alt="Gallery 2">
+                    <picture>
+                        <source type="image/webp" srcset="assets/images/gallery/gallery-02.webp">
+                        <img src="./assets/images/gallery/gallery-02.jpg" alt="Gallery 2" loading="lazy">
+                    </picture>
                     <div class="gallery-modal__item-overlay">
                         <div class="gallery-modal__plus">+</div>
                     </div>
                 </div>
                 <div class="gallery-modal__item">
-                    <img src="./assets/images/gallery/gallery-03.jpg" alt="Gallery 3">
+                    <picture>
+                        <source type="image/webp" srcset="assets/images/gallery/gallery-03.webp">
+                        <img src="./assets/images/gallery/gallery-03.jpg" alt="Gallery 3" loading="lazy">
+                    </picture>
                     <div class="gallery-modal__item-overlay">
                         <div class="gallery-modal__plus">+</div>
                     </div>
                 </div>
                 <div class="gallery-modal__item">
-                    <img src="./assets/images/gallery/gallery-04.jpg" alt="Gallery 4">
+                    <picture>
+                        <source type="image/webp" srcset="assets/images/gallery/gallery-04.webp">
+                        <img src="./assets/images/gallery/gallery-04.jpg" alt="Gallery 4" loading="lazy">
+                    </picture>
                     <div class="gallery-modal__item-overlay">
                         <div class="gallery-modal__plus">+</div>
                     </div>
                 </div>
                 <div class="gallery-modal__item">
-                    <img src="./assets/images/gallery/gallery-05.jpg" alt="Gallery 5">
+                    <picture>
+                        <source type="image/webp" srcset="assets/images/gallery/gallery-05.webp">
+                        <img src="./assets/images/gallery/gallery-05.jpg" alt="Gallery 5" loading="lazy">
+                    </picture>
                     <div class="gallery-modal__item-overlay">
                         <div class="gallery-modal__plus">+</div>
                     </div>
                 </div>
                 <div class="gallery-modal__item">
-                    <img src="./assets/images/gallery/gallery-06.jpg" alt="Gallery 6">
+                    <picture>
+                        <source type="image/webp" srcset="assets/images/gallery/gallery-06.webp">
+                        <img src="./assets/images/gallery/gallery-06.jpg" alt="Gallery 6" loading="lazy">
+                    </picture>
                     <div class="gallery-modal__item-overlay">
                         <div class="gallery-modal__plus">+</div>
                     </div>
