@@ -1,0 +1,17 @@
+{
+  "name": "the-curve-virar-west",
+  "version": "1.0.0",
+  "description": "The Curve Virar West — Official Landing Page by Abhinav Group",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "real-estate",
+    "virar-west",
+    "the-curve",
+    "abhinav-group"
+  ],
+  "author": "Abhinav Group",
+  "license": "ISC"
+}
